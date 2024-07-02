@@ -33,4 +33,6 @@ export let iconBgStore = configureStore({
   }
 })
 
+
 export let iconBgActions = iconBgSlice.actions
+

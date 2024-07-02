@@ -12,11 +12,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { iconBgActions } from '../store';
 
 
-
-
-
-
-
 function NavBar() {
 
   let dispatchIconBg = useDispatch()
@@ -37,7 +32,6 @@ function NavBar() {
   body.style.background=bodyBg
   navicon.background=background;
   navicon.fill=fill;
-
 
   let sunRef = useRef()
   let moonRef = useRef()
@@ -73,30 +67,22 @@ function NavBar() {
     <div id="sun" onClick={switchToDark} ref={sunRef}>
     <WbSunnyIcon style={sunicon} onMouseOver={sunHover} onMouseOut={sunLeave}/>
     </div>
-
     <div id="moon" ref={moonRef} onClick={switchToLight}>
     <IoMoonOutline style={moonicon}/>
     </div>
 
-    
-
     <NavLink to="/">
     <FaHome style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
-
     <NavLink to={"/about"}>
     <IoPersonSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
-
-
     <NavLink to={"/portfolio"}>
     <MdWork style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
-
     <NavLink to={"/contact"}>
     <RiMailOpenFill style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
-
     <NavLink to={"/blog"}>
     <IoChatbubblesSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>

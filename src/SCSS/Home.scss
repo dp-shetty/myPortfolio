@@ -1,0 +1,21 @@
+#profileImgDiv{
+  border: 1px solid #111111;
+  height: 99.7vh;
+  width: 40%;
+  background:  linear-gradient(75deg, #FFB400 43%, #111111 43.5%);
+
+  #imageDiv{
+    // border: 1px solid red;
+    width: 80%;
+    margin:10% auto 0 auto;
+    background: #040404;
+    border-radius: 2.5rem;
+  }
+
+  img{
+    height: 100%;
+    width: 95%;
+    filter: brightness(0.9);
+    filter: drop-shadow(0.1rem 0.1rem 0.3rem black);
+  }
+}
