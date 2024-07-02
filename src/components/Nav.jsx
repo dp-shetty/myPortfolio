@@ -9,15 +9,15 @@ import { IoChatbubblesSharp } from "react-icons/io5";
 
 
 
-function Nav({navicon}) {
+function Nav({navicon,iconhover,iconleave}) {
 
   return (
     <div>
-    <FaHome style={navicon}/>
-    <IoPersonSharp style={navicon}/>
-    <MdWork style={navicon}/>
-    <RiMailOpenFill style={navicon}/>
-    <IoChatbubblesSharp style={navicon}/>
+    <FaHome style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <IoPersonSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <MdWork style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <RiMailOpenFill style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <IoChatbubblesSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </div>
   )
 }
