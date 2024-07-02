@@ -1,5 +1,13 @@
 import React from 'react'
-import Nav from './components/Nav'
+import Home from './components/Home'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import About from './components/About'
+import Portfolio from './components/Portfolio'
+import Contact from './components/Contact'
+import Blog from './components/Blog'
+import NavBar from './components/NavBar'
+
+
 
 
 function App() {
@@ -7,7 +15,16 @@ function App() {
   
   return (
     <>
-      <Nav navicon={{fill:"white",fontSize:"1.2rem",background:"#2B2A2A",borderRadius:"100%",padding:"0.8rem",cursor:"pointer"}}  iconhover={({target})=>target.style.background="yellow"} iconleave={({target})=>target.style.background="#2B2A2A"}/>
+    <BrowserRouter>
+    <NavBar/>
+      <Routes>
+        <Route path='/' element={<Home/>}></Route>
+        <Route path='/about' element={<About/>}></Route>
+        <Route path='/portfolio' element={<Portfolio/>}></Route>
+        <Route path='/contact' element={<Contact/>}></Route>
+        <Route path='/blog' element={<Blog/>}></Route>
+      </Routes>
+    </BrowserRouter>
     </>
   )
 }
