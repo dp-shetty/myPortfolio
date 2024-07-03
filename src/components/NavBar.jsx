@@ -12,7 +12,13 @@ import { useDispatch, useSelector } from 'react-redux';
 import { iconBgActions } from '../store';
 
 
+
+
+
 function NavBar() {
+
+  
+  
 
   let dispatchIconBg = useDispatch()
   let {background,fill,bodyBg,iconHoverBg,iconLeaveBg} = useSelector(state=>state.iconBg)
@@ -22,6 +28,9 @@ function NavBar() {
   let moonicon = {fill:"black",fontSize:"1.2rem",background:"#EEEEEE",borderRadius:"100%",padding:"1.1rem",cursor:"pointer"}
 
   // console.log(iconHoverBg,iconLeaveBg)
+
+ 
+  
 
   let iconhover= ({target})=>target.style.background=iconHoverBg
   let iconleave= ({target})=>target.style.background=iconLeaveBg
@@ -58,6 +67,7 @@ function NavBar() {
     toggleBgBlack()
   }
 
+
     
 
   return (
@@ -71,20 +81,21 @@ function NavBar() {
     <IoMoonOutline style={moonicon}/>
     </div>
 
-    <NavLink to="/">
-    <FaHome style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    
+    <NavLink to="/" exact>
+    <FaHome className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
     <NavLink to={"/about"}>
-    <IoPersonSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <IoPersonSharp className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
     <NavLink to={"/portfolio"}>
-    <MdWork style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <MdWork className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
     <NavLink to={"/contact"}>
-    <RiMailOpenFill style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <RiMailOpenFill className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
     <NavLink to={"/blog"}>
-    <IoChatbubblesSharp style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <IoChatbubblesSharp className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
     </NavLink>
     
     </div>

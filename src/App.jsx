@@ -6,6 +6,7 @@ import Portfolio from './components/Portfolio'
 import Contact from './components/Contact'
 import Blog from './components/Blog'
 import NavBar from './components/NavBar'
+import "./SCSS/App.scss"
 
 
 
