@@ -28,7 +28,7 @@ let iconBgSlice = createSlice({
 })
 
 export let iconBgStore = configureStore({
-  devTools:true,
+  devTools:false,
   reducer:{
     iconBg:iconBgSlice.reducer 
   }
