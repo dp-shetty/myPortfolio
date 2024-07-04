@@ -1,4 +1,4 @@
-import React, { createContext, useEffect, useRef } from 'react'
+import React, { createContext, useEffect, useRef, useState } from 'react'
 import { Link, NavLink } from 'react-router-dom'
 import { FaHome } from "react-icons/fa";
 import { IoPersonSharp } from "react-icons/io5";
@@ -10,6 +10,7 @@ import { IoMoonOutline } from "react-icons/io5";
 import "../SCSS/NavBar.scss"
 import { useDispatch, useSelector } from 'react-redux';
 import { iconBgActions } from '../store';
+import { LensTwoTone } from '@mui/icons-material';
 
 
 
@@ -17,29 +18,39 @@ import { iconBgActions } from '../store';
 
 function NavBar() {
 
-  
-  
 
   let dispatchIconBg = useDispatch()
   let {background,fill,bodyBg,iconHoverBg,iconLeaveBg} = useSelector(state=>state.iconBg)
 
-  let navicon = {fill:"white",fontSize:"1.2rem",background:"#2B2A2A",borderRadius:"100%",padding:"1.1rem",cursor:"pointer",transition:"all ease-in-out 1.4s"}
+
+  let navicon = {fill:"white",fontSize:"1.2rem",borderRadius:"100%",padding:"1.1rem",cursor:"pointer",transition:"all ease-in-out 0.9s"}
   let sunicon = {fill:"white",fontSize:"1.2rem",background:"#4B4B4B",borderRadius:"100%",padding:"1.1rem",cursor:"pointer"}
   let moonicon = {fill:"black",fontSize:"1.2rem",background:"#EEEEEE",borderRadius:"100%",padding:"1.1rem",cursor:"pointer"}
 
-  // console.log(iconHoverBg,iconLeaveBg)
-
- 
-  
-
-  let iconhover= ({target})=>target.style.background=iconHoverBg
+  // let iconhover= ({target})=>target.innerText=""
   let iconleave= ({target})=>target.style.background=iconLeaveBg
   let sunHover = ({target})=>target.style.background="#646464"
   let sunLeave = ({target})=>target.style.background="#4B4B4B"
+  let navIcons = document.querySelectorAll(".navIcons")
+  let anchors = document.getElementsByTagName('a')
+
+
+  useEffect(()=>{
+    if(bodyBg==="#111111"){
+      for (let anchor of anchors) {
+        anchor.style.color="white"
+      }
+    }else if(bodyBg==="#ffffff"){
+      for (let anchor of anchors) {
+        anchor.style.color="black"
+      }
+    }
+  },[bodyBg])
+
+
 
   let body = document.body
   body.style.background=bodyBg
-  navicon.background=background;
   navicon.fill=fill;
 
   let sunRef = useRef()
@@ -55,7 +66,7 @@ function NavBar() {
 
   
   let switchToDark = ()=>{
-    sunRef.current.style.visibility="hidden"
+    // sunRef.current.style.visibility="hidden"
     moonRef.current.style.display="flex";
     toggleBgWhite()
   }
@@ -68,7 +79,33 @@ function NavBar() {
   }
 
 
-    
+  useEffect(() => {
+    const navContents = document.querySelectorAll(".navContent");
+
+    function handleMediaQueryChange(event) {
+      if (event.matches) {
+        navContents.forEach(navContent => {
+          navContent.style.display = "none";
+        });
+      }else {
+        navContents.forEach(navContent => {
+          navContent.style.display = "";
+        });
+      }
+    }
+
+    const mediaQueryList = window.matchMedia('(min-width: 320px) and (max-width: 480px)');
+    mediaQueryList.addEventListener('change', handleMediaQueryChange);
+    handleMediaQueryChange(mediaQueryList);
+
+    return () => {
+      mediaQueryList.removeEventListener('change', handleMediaQueryChange);
+    };
+  }, []);
+
+
+
+
 
   return (
 
@@ -80,22 +117,31 @@ function NavBar() {
     <div id="moon" ref={moonRef} onClick={switchToLight}>
     <IoMoonOutline style={moonicon}/>
     </div>
+    {/* onMouseOver={iconhover} onMouseOut={iconleave} */}
+  
+    <NavLink to={"/"}>
+    <p className='navContent'>HOME</p>
+    <FaHome className='navIcons'  style={navicon} />
+    </NavLink>
 
-    
-    <NavLink to="/" exact>
-    <FaHome className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
-    </NavLink>
     <NavLink to={"/about"}>
-    <IoPersonSharp className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <p className='navContent'>ABOUT</p>
+    <IoPersonSharp className='navIcons' style={navicon}/>
     </NavLink>
+
     <NavLink to={"/portfolio"}>
-    <MdWork className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <p className='navContent'>PORTFOLIO</p>
+    <MdWork className='navIcons'  style={navicon}/>
     </NavLink>
+
     <NavLink to={"/contact"}>
-    <RiMailOpenFill className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <p className='navContent'>CONTACT</p>
+    <RiMailOpenFill className='navIcons'  style={navicon}/>
     </NavLink>
+
     <NavLink to={"/blog"}>
-    <IoChatbubblesSharp className='navIcons'  style={navicon} onMouseOver={iconhover} onMouseOut={iconleave}/>
+    <p className='navContent'>BLOG</p>
+    <IoChatbubblesSharp className='navIcons'  style={navicon}/>
     </NavLink>
     
     </div>

@@ -1,0 +1,85 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+}
+
+#navId {
+  position: absolute;
+  right: 0.7rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 12%;
+  height: 99.7vh;
+  gap: 1.7rem;
+  color: #646464;
+}
+#navId #sun {
+  margin: 1.2rem 0 3rem 7rem;
+  display: flex;
+  flex-direction: column;
+}
+#navId #moon {
+  position: absolute;
+  top: 3.57rem;
+  right: -0.1rem;
+  display: none;
+}
+
+a {
+  text-decoration: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-radius: 1.8rem;
+  padding-left: 0.2rem;
+  transition: all 0.9s;
+}
+
+a p {
+  margin-left: 0.9rem;
+  visibility: hidden;
+}
+
+.active .navIcons {
+  background: #FFB400;
+}
+
+a:hover .navIcons, a:hover {
+  background: #FFB400;
+}
+
+a:hover p {
+  visibility: visible;
+}
+
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #navId {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    top: 85%;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 98%;
+    margin: auto;
+    height: 12%;
+    gap: 0.5rem;
+  }
+  #navId #sun {
+    margin: 0rem;
+    position: absolute;
+    top: -27.5rem;
+    right: 0.5rem;
+  }
+  #navId #moon {
+    right: 0.5rem;
+    top: -27.5rem;
+  }
+  #navId a:hover {
+    background: none;
+  }
+}/*# sourceMappingURL=NavBar.css.map */

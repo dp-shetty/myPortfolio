@@ -28,7 +28,8 @@ let iconBgSlice = createSlice({
 })
 
 export let iconBgStore = configureStore({
-  devTools:false,
+  devTools:false, 
+  //by making it false, it will not show the user that how redux is working, by default it is true,we have to make it false in order to protect redux functionality
   reducer:{
     iconBg:iconBgSlice.reducer 
   }

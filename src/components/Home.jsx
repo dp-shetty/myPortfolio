@@ -1,7 +1,9 @@
 import React, { useEffect, useRef } from 'react'
 import "../SCSS/Home.scss"
-import image from "../assets/images/dps.png"
+import image from "../assets/images/dpsrbg.png"
 import {useSelector } from 'react-redux';
+import image2 from "../assets/images/dps2.png"
+
 
 
 
@@ -30,7 +32,7 @@ function Home() {
     <section id="homeSec">
     <div id="profileImgDiv">
     <div id="imageDiv">
-    <img src={image} alt="" />
+    <img id='proImg' src={image} alt="" />
     </div>
     </div>
 
@@ -46,7 +48,7 @@ function Home() {
     </p>
     <br />
     <p id='bodyContent' ref={bodyContentRef}>
-    Creative and passionate Frontend React Developer with a knack for crafting seamless and dynamic user experiences. Skilled in turning complex problems into intuitive and responsive designs,I build modern web applications that delight users and drive engagement.
+    Creative and passionate Frontend React Developer with a knack for crafting seamless and dynamic user experiences.I build modern web applications that delight users and drive engagement.
     </p>
     </div>
     </section>
