@@ -7,15 +7,16 @@ import Contact from './components/Contact'
 import Blog from './components/Blog'
 import NavBar from './components/NavBar'
 import "./SCSS/App.scss"
-
-
+import CursorAnimate from './components/CursorAnimate'
 
 
 function App() {
 
+
+
   
   return (
-    <>
+    <div>
     <BrowserRouter>
     <NavBar/>
       <Routes>
@@ -26,7 +27,7 @@ function App() {
         <Route path='/blog' element={<Blog/>}></Route>
       </Routes>
     </BrowserRouter>
-    </>
+    </div>
   )
 }
 
