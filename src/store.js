@@ -36,5 +36,11 @@ export let iconBgStore = configureStore({
 })
 
 
+let aboutPageSlice = createSlice({
+  name:"about",
+  initialState:{},
+  reducers:{}
+})
+
 export let iconBgActions = iconBgSlice.actions
 

@@ -2,7 +2,6 @@ import React, { useEffect, useRef } from 'react'
 import "../SCSS/Home.scss"
 import image from "../assets/images/dpsrbg.png"
 import {useSelector } from 'react-redux';
-import image2 from "../assets/images/dps2.png"
 
 
 
