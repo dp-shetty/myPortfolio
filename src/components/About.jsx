@@ -39,7 +39,7 @@ function About() {
 
 
 
-  let data = [{FirstName: "DURGA PRASAD",Age: "27 Years",Freelance: "Available",Phone: "+91-6362405153",Skype: "live:.cid.a8c25624fccf1ce3",
+  let data = [{FirstName: "DURGA PRASAD",Age: "23 Years",Freelance: "Available",Phone: "+91-6362405153",Skype: "live:.cid.a8c25624fccf1ce3",
     LastName: "T D",Nationality: "Indian",Address: "Banglore, INDIA",Email: "dps2k811@gmail.com",Languages: "English,Hindi,Kannada"}]
 
 
