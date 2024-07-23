@@ -1,119 +1,110 @@
-*{
+* {
   margin: 0;
   padding: 0;
-  // box-sizing: border-box;
   font-family: "Poppins";
 }
 
-#secHead{
+#secHead {
   // border: 1px solid yellow;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 25rem;
-  margin: 3rem auto;
+  margin: 1.5rem auto;
 
-  #head1{
+  #head1 {
     // border: 1px solid red;
     position: absolute;
     z-index: -1;
   }
-  #head1 p{
+  #head1 p {
     font-size: 80px;
     font-weight: 800;
     letter-spacing: 0.5rem;
   }
-  
-  #head2 p{
+
+  #head2 p {
     // border: 1px solid blue;
     font-size: 50px;
     font-weight: 900;
     letter-spacing: 0.5rem;
     font-weight: bold;
-  
-    span{
-      color: #FFB400;
+
+    span {
+      color: #ffb400;
     }
-
   }
-
 }
 
-
-#secBody{
+#secBody {
   // border: 1px solid red;
   margin-top: 6rem;
   width: 92%;
   display: flex;
-  padding: 1.5rem;
+  // padding: 1.5rem;
 
-  #secBody1{
+  #secBody1 {
     // border: 1px solid red;
     width: 50%;
-    padding: 0.5rem;
-  
-    #infoBody{
+
+    #infoBody {
       // border: 1px solid blue;
       display: flex;
       justify-content: space-between;
       font-size: 20px;
       margin-bottom: 0.8rem;
-  
-      #firstName,#lastName{
+
+      #firstName,
+      #lastName {
         // border: 1px solid red;
         display: flex;
         flex-direction: column;
         gap: 1.8rem;
-        padding: 0.5rem;
+        // padding: 0.5rem;
       }
     }
-  
-    #download{
-      border: 1px solid #FFB400;
+
+    #download {
+      border: 1px solid #ffb400;
       width: 32%;
       height: 3rem;
       margin-left: 0.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      // padding: 0.5rem;
       border-radius: 3.5rem;
       padding-left: 0.8rem;
       font-weight: bold;
-  
-      #Dsvg{
-        border: 1px solid #FFB400;
+
+      #Dsvg {
+        border: 1px solid #ffb400;
         height: 100%;
         border-radius: 100%;
         width: 22%;
         display: flex;
         align-items: center;
         justify-content: center;
-        background: #FFB400;
+        background: #ffb400;
       }
-  
-  
     }
-  
-    #download:hover{
-      background: #FFB400;
+
+    #download:hover {
+      background: #ffb400;
       transition: all 0.9s;
       cursor: pointer;
     }
   }
 
-  #secBody2{
+  #secBody2 {
     // border: 1px solid green;
     width: 48%;
     display: flex;
     flex-wrap: wrap;
     gap: 0.8rem;
     justify-content: center;
-    // align-items: center;
-    padding: 0.7rem;
+    padding: 0.5rem;
     font-size: 20px;
 
-    div{
+    div {
       // border: 1px solid red;
       width: 45%;
       border-radius: 0.5rem;
@@ -123,7 +114,7 @@
       justify-content: center;
       align-items: center;
 
-      .details{
+      .details {
         // border: 1px solid red;
         display: flex;
         // justify-content: space-around;
@@ -133,13 +124,13 @@
         gap: 0.3rem;
       }
 
-      hr{
+      hr {
         width: 8%;
         border: 1px solid rgb(119, 119, 119);
       }
 
-      span{
-        color: #FFB400;
+      span {
+        color: #ffb400;
         font-size: 50px;
         font-weight: bolder;
       }
@@ -149,70 +140,73 @@
 
 //?? Mobile View (320-480px)
 
-@media screen and (min-width:320px) and (max-width:480px){
-  
-
-  #secHead{
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #secHead {
     // border: 1px solid red;
     margin-bottom: 0rem;
     width: 15rem;
     margin-left: auto;
 
-    #head1 p{
+    #head1 p {
       font-size: 40px;
     }
 
-    #head2 p{
+    #head2 p {
       // border: 1px solid blue;
-      font-size: 25px;  
+      font-size: 25px;
     }
   }
 
-  #secBody{
+  #secBody {
     // border: 1px solid blue;
-    width: 100%;
+    width: 98%;
     flex-direction: column;
-    margin-top: 2rem;
-  
-    #secBody1{
+    margin-top: 1.2rem;
+    padding: 0rem;
+
+    #secBody1 {
       // border: 1px solid green;
       width: 100%;
       padding: 0rem;
-    
-      #infoBody{
+
+      #infoBody {
         // border: 1px solid blue;
         width: 100%;
         font-size: 10px;
-        justify-content: space-around;
+        margin-bottom: 0.8rem;
+        display: flex;
+
+        #firstName,
+        #lastName {
+          // border: 1px solid #ffb400;
+          gap: 0.8rem;
+          font-size: 10px;
+          padding: 0.3rem;
+        }
       }
 
-      #download{
-        width: 60%; 
-        font-size: 15px; 
+      #download {
+        width: 45%;
+        font-size: 14px;
+        height: 2rem;
+        font-size: 11px;
       }
     }
-  
-    #secBody2{
+
+    #secBody2 {
       // border: 1px solid yellow;
-      width: 92.7%;
+      width: 95%;
       font-size: 10px;
-  
-      div{
+
+      div {
         // border: 1px solid red;
         width: 45%;
         padding: 0.2rem;
-  
-  
-        span{
+
+        span {
           font-size: 30px;
         }
       }
     }
   }
-
-
 }
-
-
-
-

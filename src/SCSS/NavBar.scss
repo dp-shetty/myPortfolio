@@ -6,7 +6,7 @@
 
 #navId{
   // border: 1px solid red;
-  position: absolute;
+  position: fixed;
   right: 0.7rem;
   display: flex;
   flex-direction: column;
@@ -28,8 +28,8 @@
 
   #moon{
     position: absolute;
-    top: 3.57rem;
-    right: -0.1rem;
+    top: 5.7rem;
+    right: 0.5rem;
     display: none;
   }
 }
@@ -79,31 +79,25 @@ a:hover p{
 
   #navId{
     // border: 1px solid red;
-    position: fixed;
-    bottom: 0;
+    top: 88%;
+    height: 12%;
+    width: 100%;
+    flex-direction: row;
+    gap: 0.3rem;
     right: 0;
     left: 0;
-    top: 88%;
-    flex-direction: row;
-    justify-content: space-around;
-    width: 100%;
-    // margin: auto;
-    height: 12%;
-    gap: 0.3rem;
     background: #2B2A2A;
 
     #sun{
-      // border: 1px solid red;
-      // margin: 0rem;
+      margin: 0rem;
       position: absolute;
-      top: -27.5rem;
-      right: 0.5rem;
+      top: -20rem;
+      right: 0.3rem;
     }
   
     #moon{
-      // border: 1px solid red;
-      right: 0.5rem;
-      top: -26.3rem;
+      top:-20rem;
+      right: 0.3rem;
     }
 
     a:hover{
