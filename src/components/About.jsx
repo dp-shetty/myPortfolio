@@ -14,20 +14,18 @@ function About() {
   let secBody2Ref = useRef();
 
   useEffect(() => {
-    if(bodyBg==="#111111"){
-      p2ref.current.style.color="white"
-      p1ref.current.style.color="#4b4b4b"
-      p3ref.current.style.color="white"
-      p4ref.current.style.color="white"
-      secBody2Ref.current.style.color="white"
-      //#222222
-    }else if(bodyBg==="#ffffff"){
-      p2ref.current.style.color="black"
-      p1ref.current.style.color="#d7d7d7"
-      p3ref.current.style.color="black"
-      p4ref.current.style.color="black"
-      secBody2Ref.current.style.color="black"
-      // #EFF0F0
+    if (bodyBg === "#111111") {
+      p2ref.current.style.color = "white";
+      p1ref.current.style.color = "#4b4b4b";
+      p3ref.current.style.color = "white";
+      p4ref.current.style.color = "white";
+      secBody2Ref.current.style.color = "white";
+    } else if (bodyBg === "#ffffff") {
+      p2ref.current.style.color = "black";
+      p1ref.current.style.color = "#d7d7d7";
+      p3ref.current.style.color = "black";
+      p4ref.current.style.color = "black";
+      secBody2Ref.current.style.color = "black";
     }
   }, [bodyBg]);
 
@@ -103,7 +101,7 @@ function About() {
           </div>
 
           <div id="download">
-            <p  ref={p4ref}>DOWNLOAD CV</p>
+            <p ref={p4ref}>DOWNLOAD CV</p>
             <a id="Dsvg" href={resume} target="_blank">
               <FaDownload />
             </a>

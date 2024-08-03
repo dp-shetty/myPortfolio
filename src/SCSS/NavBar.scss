@@ -1,11 +1,10 @@
-*{
+* {
   margin: 0;
   padding: 0;
   font-family: "Poppins";
 }
 
-#navId{
-  // border: 1px solid red;
+#navId {
   position: fixed;
   right: 0.7rem;
   display: flex;
@@ -18,15 +17,13 @@
   color: #646464;
   top: 0;
 
-
-
-  #sun{
+  #sun {
     margin: 1.2rem 0 3rem 7rem;
     display: flex;
     flex-direction: column;
   }
 
-  #moon{
+  #moon {
     position: absolute;
     top: 5.7rem;
     right: 0.5rem;
@@ -34,10 +31,9 @@
   }
 }
 
-a{
+a {
   text-decoration: none;
   display: flex;
-  // border: 1px solid blue;
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -46,39 +42,31 @@ a{
   transition: all 0.9s;
 }
 
-a p{
-  // border: 1px solid red;
+a p {
   margin-left: 0.9rem;
   visibility: hidden;
-  // display: none;
 }
 
-
-
-.active .navIcons{
-  background:#FFB400;
+.active .navIcons {
+  background: #ffb400;
 }
 
-a:hover .navIcons,a:hover{
-  background:#FFB400;
+a:hover .navIcons,
+a:hover {
+  background: #ffb400;
 }
 
-a:hover p{
+a:hover p {
   transition: all 0.9s;
   visibility: visible;
 }
 
-
- a:hover{
+a:hover {
   transition: all 0.9s;
 }
 
-
-
-@media screen and (min-width:320px) and (max-width:480px){
-
-  #navId{
-    // border: 1px solid red;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #navId {
     top: 88%;
     height: 12%;
     width: 100%;
@@ -86,27 +74,22 @@ a:hover p{
     gap: 0.3rem;
     right: 0;
     left: 0;
-    background: #2B2A2A;
+    background: #2b2a2a;
 
-    #sun{
+    #sun {
       margin: 0rem;
       position: absolute;
       top: -32rem;
       right: 0.3rem;
     }
-  
-    #moon{
-      // border: 1px solid red;
+
+    #moon {
       top: -32rem;
       right: 0.3rem;
     }
 
-    a:hover{
-      background:none;
+    a:hover {
+      background: none;
     }
-
-
   }
-  
 }
-

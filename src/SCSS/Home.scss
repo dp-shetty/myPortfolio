@@ -1,133 +1,105 @@
-
-#homeSec{
-  // border: 1px solid red;
+#homeSec {
   height: 100vh;
   display: flex;
   align-items: center;
   font-family: "Poppins";
 
-  #profileImgDiv{
-    // border: 1px solid red;
+  #profileImgDiv {
     height: 100%;
     width: 40%;
-    background:  linear-gradient(75deg, #FFB400 43%, transparent 43.5%);
+    background: linear-gradient(75deg, #ffb400 43%, transparent 43.5%);
     display: flex;
     justify-content: center;
-  
-    #imageDiv{
-      // border: 1px solid red;
+
+    #imageDiv {
       width: 80%;
       height: 80%;
-      margin:10% auto 0 auto;
+      margin: 10% auto 0 auto;
       background: #040404;
       border-radius: 1.7rem;
       overflow: hidden;
     }
-  
-    img{
+
+    img {
       height: 100%;
-      // width: 100%;
       border-radius: 1.7rem;
     }
   }
 
-  #homeContent{
+  #homeContent {
     width: 60%;
     display: flex;
     flex-direction: column;
 
-    span{
-      // border: 1px solid red;
-      color: #FFB400;
+    span {
+      color: #ffb400;
       display: flex;
       align-items: center;
       gap: 1.3rem;
       margin-bottom: 1.2rem;
     }
 
-    #hleId{
-      border: 1px solid #FFB400;
+    #hleId {
+      border: 1px solid #ffb400;
       width: 3%;
       height: 0.35vh;
-      background-color: #FFB400;
+      background-color: #ffb400;
       border-radius: 3rem;
     }
 
-    #bodyContent{
-      // border: 1px solid red;
+    #bodyContent {
       font-size: 20px;
-      width:78%;
+      width: 78%;
       text-align: justify;
     }
-
-    #middleContent{
-      // border: 1px solid red;
-      // display: flex;
-      // justify-content: center;
-    }
-
   }
-
-
 }
 
-@media screen and (min-width:320px) and (max-width:480px){
-
-  #homeSec{
-    // border: 1px solid blue;
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #homeSec {
     flex-direction: column;
     width: 100%;
 
-    #homeContent{
-      // border: 1px solid red;
+    #homeContent {
       padding: 1.5rem 0;
       width: 100%;
 
-      span{
-        // border: 1px solid red;
+      span {
         font-size: 21px;
         justify-content: center;
       }
 
-      #hleId{
-        // border: 1px solid red;
+      #hleId {
         display: none;
       }
 
-      #middleContent{
-        // border: 1px solid red;
+      #middleContent {
         font-size: 18px;
         display: flex;
         justify-content: center;
       }
 
-      #bodyContent{
-        // border: 1px solid red;
+      #bodyContent {
         width: 95%;
         margin: auto;
         font-size: 13px;
         text-align: justify;
-        // color: red;
         padding: 1.2rem 0;
       }
     }
 
-
-
-    #profileImgDiv{
-      // border: 1px solid green;
+    #profileImgDiv {
       height: 40%;
       width: 99%;
-      background:none;
+      background: none;
       display: flex;
       justify-content: center;
       align-items: center;
 
-      #imageDiv{
-        // border: 1px solid red;
+      #imageDiv {
         width: 9rem;
         height: 9rem;
-        margin:3% auto 0 auto;
+        margin: 3% auto 0 auto;
         background: #040404;
         border-radius: 100%;
         box-shadow: 0.02rem 0.05rem 0.05rem 0.05rem rgba(169, 163, 163, 0.34);
@@ -135,21 +107,11 @@
         display: flex;
         justify-content: center;
       }
-    
-      img{
-        width: 150%; 
+
+      img {
+        width: 150%;
         margin-left: 2.5rem;
       }
     }
-
-    
-  } 
-  
-
+  }
 }
-
-
-
-
-
-
