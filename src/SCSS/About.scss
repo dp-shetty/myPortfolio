@@ -143,7 +143,7 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #secHead {
     // border: 1px solid red;
-    margin-bottom: 0rem;
+    margin-top: 4rem;
     width: 15rem;
     margin-left: auto;
 
@@ -161,20 +161,21 @@
     // border: 1px solid blue;
     width: 98%;
     flex-direction: column;
-    margin-top: 1.2rem;
-    padding: 0rem;
+    margin-top: 1.5rem;
+    padding: 0.5rem 0rem;
 
     #secBody1 {
       // border: 1px solid green;
       width: 100%;
-      padding: 0rem;
+      padding: 1.5rem 0;
 
       #infoBody {
         // border: 1px solid blue;
         width: 100%;
         font-size: 10px;
-        margin-bottom: 0.8rem;
+        margin-bottom: 1rem;
         display: flex;
+        padding: 0 0.1rem;
 
         #firstName,
         #lastName {
@@ -186,17 +187,21 @@
       }
 
       #download {
+        // border: 1px solid red;
         width: 45%;
         font-size: 14px;
         height: 2rem;
         font-size: 11px;
+        margin-left: 4rem;
       }
     }
 
     #secBody2 {
       // border: 1px solid yellow;
       width: 95%;
+      margin: 0 auto;
       font-size: 10px;
+      padding: 1.2rem 0rem;
 
       div {
         // border: 1px solid red;
