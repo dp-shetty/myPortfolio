@@ -160,13 +160,13 @@
   }
 
   #secBody {
-    border: 1px solid red;
     width: 98%;
     flex-direction: column;
     margin-top: 1.5rem;
     padding: 0.5rem 0rem;
-    height: 58vh;
+    height: 60vh;
     overflow-y: auto;
+    overflow-x: hidden;
 
     #secBody1 {
       width: 100%;
