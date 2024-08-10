@@ -12,6 +12,7 @@ function About() {
   let p3ref = useRef();
   let p4ref = useRef();
   let secBody2Ref = useRef();
+  let dwdAnchorRef = useRef();
 
   useEffect(() => {
     if (bodyBg === "#111111") {
@@ -20,12 +21,14 @@ function About() {
       p3ref.current.style.color = "white";
       p4ref.current.style.color = "white";
       secBody2Ref.current.style.color = "white";
+      dwdAnchorRef.current.style.color = "white";
     } else if (bodyBg === "#ffffff") {
       p2ref.current.style.color = "black";
       p1ref.current.style.color = "#d7d7d7";
       p3ref.current.style.color = "black";
       p4ref.current.style.color = "black";
       secBody2Ref.current.style.color = "black";
+      dwdAnchorRef.current.style.color = "black";
     }
   }, [bodyBg]);
 
@@ -100,11 +103,13 @@ function About() {
             </div>
           </div>
 
-          <div id="download">
+          <div id="downloadDiv">
+          <div className="dwdIcon">
             <p ref={p4ref}>DOWNLOAD CV</p>
-            <a id="Dsvg" href={resume} target="_blank">
+            <a id="Dsvg" href={resume} target="_blank" ref={dwdAnchorRef}>
               <FaDownload />
             </a>
+          </div>
           </div>
         </section>
 

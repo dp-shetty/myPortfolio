@@ -17,21 +17,14 @@
   color: #646464;
   top: 0;
 
-  #sun {
-    margin: 1.2rem 0 3rem 7rem;
+  #toggleVision {
+    margin: 0 0 0 auto;
     display: flex;
     flex-direction: column;
   }
-
-  #moon {
-    position: absolute;
-    top: 5.7rem;
-    right: 0.5rem;
-    display: none;
-  }
 }
 
-a {
+.navIconsLink{
   text-decoration: none;
   display: flex;
   justify-content: space-between;
@@ -42,7 +35,7 @@ a {
   transition: all 0.9s;
 }
 
-a p {
+.navIconsLink p {
   margin-left: 0.9rem;
   visibility: hidden;
 }
@@ -51,17 +44,17 @@ a p {
   background: #ffb400;
 }
 
-a:hover .navIcons,
-a:hover {
+.navIconsLink:hover .navIcons,
+.navIconsLink:hover {
   background: #ffb400;
 }
 
-a:hover p {
+.navIconsLink:hover p {
   transition: all 0.9s;
   visibility: visible;
 }
 
-a:hover {
+.navIconsLink:hover {
   transition: all 0.9s;
 }
 
@@ -76,19 +69,12 @@ a:hover {
     left: 0;
     background: #2b2a2a;
 
-    #sun {
-      margin: 0rem;
+    #toggleVision {
       position: absolute;
-      top: -32rem;
+      top: -35rem;
       right: 0.3rem;
     }
-
-    #moon {
-      top: -32rem;
-      right: 0.3rem;
-    }
-
-    a:hover {
+    .navIconsLink:hover {
       background: none;
     }
   }

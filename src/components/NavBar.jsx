@@ -27,26 +27,24 @@ function NavBar() {
     transition: "all ease-in-out 0.9s",
   };
   let sunicon = {
-    fill: "white",
-    fontSize: "1.2rem",
+    fill: navicon.fill,
+    fontSize: navicon.fontSize,
     background: "#4B4B4B",
-    borderRadius: "100%",
-    padding: "1.1rem",
-    cursor: "pointer",
+    borderRadius: navicon.borderRadius,
+    padding: navicon.padding,
+    cursor: navicon.cursor,
   };
   let moonicon = {
     fill: "black",
-    fontSize: "1.2rem",
+    fontSize: navicon.fontSize,
     background: "#EEEEEE",
-    borderRadius: "100%",
-    padding: "1.1rem",
-    cursor: "pointer",
+    borderRadius: navicon.borderRadius,
+    padding: navicon.padding,
+    cursor: navicon.cursor,
   };
 
-  let iconleave = ({ target }) => (target.style.background = iconLeaveBg);
   let sunHover = ({ target }) => (target.style.background = "#646464");
   let sunLeave = ({ target }) => (target.style.background = "#4B4B4B");
-  let navIcons = document.querySelectorAll(".navIcons");
   let anchors = document.getElementsByTagName("a");
 
   useEffect(() => {
@@ -65,8 +63,6 @@ function NavBar() {
   body.style.background = bodyBg;
   navicon.fill = fill;
 
-  let sunRef = useRef();
-  let moonRef = useRef();
 
   let toggleBgWhite = () => {
     dispatchIconBg(iconBgActions.toggleBgWhite());
@@ -76,16 +72,6 @@ function NavBar() {
     dispatchIconBg(iconBgActions.toggleBgBlack());
   };
 
-  let switchToDark = () => {
-    moonRef.current.style.display = "flex";
-    toggleBgWhite();
-  };
-
-  let switchToLight = () => {
-    moonRef.current.style.display = "none";
-    sunRef.current.style.visibility = "visible";
-    toggleBgBlack();
-  };
 
   useEffect(() => {
     const navContents = document.querySelectorAll(".navContent");
@@ -115,38 +101,43 @@ function NavBar() {
 
   return (
     <div id="navId">
-      <div id="sun" onClick={switchToDark} ref={sunRef}>
-        <WbSunnyIcon
-          style={sunicon}
-          onMouseOver={sunHover}
-          onMouseOut={sunLeave}
-        />
-      </div>
-      <div id="moon" ref={moonRef} onClick={switchToLight}>
-        <IoMoonOutline style={moonicon} />
+      <div id="toggleVision">
+        {bodyBg === "#111111" ? (
+          <WbSunnyIcon
+            style={sunicon}
+            onMouseOver={sunHover}
+            onMouseOut={sunLeave}
+            onClick={()=>toggleBgWhite()}
+          />
+        ) : (
+          <IoMoonOutline
+            style={moonicon}
+            onClick={()=>toggleBgBlack()}
+          />
+        )}
       </div>
 
-      <NavLink to={"/"}>
+      <NavLink className={"navIconsLink"} to={"/"}>
         <p className="navContent">HOME</p>
         <FaHome className="navIcons" style={navicon} />
       </NavLink>
 
-      <NavLink to={"/about"}>
+      <NavLink className={"navIconsLink"} to={"/about"}>
         <p className="navContent">ABOUT</p>
         <IoPersonSharp className="navIcons" style={navicon} />
       </NavLink>
 
-      <NavLink to={"/portfolio"}>
+      <NavLink className={"navIconsLink"} to={"/portfolio"}>
         <p className="navContent">PORTFOLIO</p>
         <MdWork className="navIcons" style={navicon} />
       </NavLink>
 
-      <NavLink to={"/contact"}>
+      <NavLink className={"navIconsLink"} to={"/contact"}>
         <p className="navContent">CONTACT</p>
         <RiMailOpenFill className="navIcons" style={navicon} />
       </NavLink>
 
-      <NavLink to={"/blog"}>
+      <NavLink className={"navIconsLink"} to={"/blog"}>
         <p className="navContent">BLOG</p>
         <IoChatbubblesSharp className="navIcons" style={navicon} />
       </NavLink>
