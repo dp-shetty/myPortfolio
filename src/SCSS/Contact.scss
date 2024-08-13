@@ -29,17 +29,27 @@
   width: 95%;
 
   .addressBody {
-    width: 30%;
+    width: 40%;
 
     .communicationHead {
+      padding: 0.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
     }
 
     .contact-details {
+      .contact-mail,
+      .contact-phone,
+      .location {
+        padding: 0.8rem;
+        gap: 1rem;
+      }
     }
   }
 
   .formBody {
-    width: 70%;
+    width: 60%;
   }
 }
 
@@ -47,4 +57,7 @@
 .mail-icon svg,
 .call-icon svg {
   fill: #ffb400;
+  font-size: 2.5rem;
 }
+
+

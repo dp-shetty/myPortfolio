@@ -1,0 +1,29 @@
+.submit-btn-div{
+  border: 1px solid #ffb400;
+  width: 29%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  border-radius: 35px;
+  height: 3.4rem;
+  cursor: pointer;
+  padding-left: 0.5rem;
+
+  .submit-btn{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+
+    .css-i4bv87-MuiSvgIcon-root{
+      border: 1px solid #ffb400;
+      background-color: #ffb400;
+      padding: 0.8rem;
+      width: 13.5%;
+      height: 100%;
+      border-radius: 35px;
+      margin-right: -0.5rem;
+      color: white;
+      font-size:2px;
+    }
+  }
+}
