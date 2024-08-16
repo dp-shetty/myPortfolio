@@ -51,7 +51,8 @@ function Contact() {
 
   return (
     <>
-      <section id="contactHead" className="flex items-center justify-center">
+    <section className="contact-section">
+    <section id="contactHead" className="flex items-center justify-center">
         <div id="head1" className="absolute">
           <p
             ref={contactHeadPara1}
@@ -136,6 +137,7 @@ function Contact() {
           <UserForm />
         </div>
       </section>
+    </section>
     </>
   );
 }
