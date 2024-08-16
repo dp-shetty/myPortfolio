@@ -60,4 +60,79 @@
   font-size: 2.5rem;
 }
 
+@media screen and (min-width: 320px) and (max-width: 480px) {
+  #contactHead {
+    #head1 p {
+      font-size: 3em;
+    }
 
+    #head2 p {
+      font-size: 1.25em;
+    }
+  }
+
+  .contactBody {
+    flex-direction: column;
+    margin: auto;
+    gap: 0.5rem;
+
+    .addressBody {
+      width: 100%;
+
+      .communicationHead {
+        gap: 0.5rem;
+
+        h2 {
+          font-size: 0.9em;
+          text-align: center;
+        }
+
+        p {
+          font-size: 0.7em;
+          text-align: justify;
+        }
+      }
+
+      .contact-details {
+        .location {
+          .add-point {
+            font-size: 0.8em;
+          }
+          .add-point + p {
+            font-size: 0.6em;
+          }
+        }
+
+        .contact-mail {
+          .mail-me {
+            font-size: 0.8em;
+          }
+          .mail-me + a {
+            font-size: 0.6em;
+          }
+        }
+
+        .contact-phone {
+          .call-me {
+            font-size: 0.8em;
+          }
+          .call-me + a {
+            font-size: 0.6em;
+          }
+        }
+      }
+    }
+
+    .formBody {
+      width: 100%;
+    }
+
+    margin-bottom: 5.8rem;
+  }
+
+  .map-icon svg,
+  .mail-icon svg,
+  .call-icon svg {
+    font-size: 1.5em;
+  }
+}

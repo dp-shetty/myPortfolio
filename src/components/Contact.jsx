@@ -133,9 +133,9 @@ function Contact() {
           </div>
         </div>
         <div className="formBody">
-          <UserForm/>
+          <UserForm />
         </div>
-      </section>  
+      </section>
     </>
   );
 }

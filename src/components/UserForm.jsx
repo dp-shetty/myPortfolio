@@ -1,13 +1,9 @@
 import React, { useEffect, useRef, useState } from "react";
-import {
-  TextField,
-  MenuItem,
-  Button,
-  Container,
-} from "@mui/material";
+import { MenuItem, Button, Container } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import "../SCSS/UserForm.scss";
 import { useSelector } from "react-redux";
+import { TextFieldComponent } from "./Common/TextFieldComponent";
 
 const UserForm = () => {
   let { bodyBg } = useSelector((state) => state.iconBg);
@@ -20,6 +16,7 @@ const UserForm = () => {
       sendMsgRef.current.style.color = "#666666";
     }
   }, [bodyBg]);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -37,49 +34,41 @@ const UserForm = () => {
   };
 
   return (
-    <Container>
-      <form onSubmit={handleSubmit}>
+    <Container className="formContainer p-0">
+      <form onSubmit={handleSubmit} className="userForm">
         <div className="name-email-textfield flex justify-center items-center gap-8">
-          <TextField
+          <TextFieldComponent
             label="Name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            fullWidth
-            margin="normal"
           />
-          <TextField
+          <TextFieldComponent
             label="Email"
             name="email"
             value={formData.email}
             onChange={handleChange}
             type="email"
-            fullWidth
-            margin="normal"
           />
         </div>
-        <TextField
+        <TextFieldComponent
           select
           label="who you are"
           name="role"
           value={formData.role}
           onChange={handleChange}
-          fullWidth
-          margin="normal"
         >
           <MenuItem value="interviewer">INTERVIEWER</MenuItem>
           <MenuItem value="visiter">VISITER</MenuItem>
           <MenuItem value="contributor">OPEN-SOURCE CONTRIBUTOR</MenuItem>
-        </TextField>
-        <TextField
+        </TextFieldComponent>
+        <TextFieldComponent
           label="Comments"
           name="comments"
           value={formData.comments}
           onChange={handleChange}
           multiline
           rows={4}
-          fullWidth
-          margin="normal"
         />
         <div>
           <div className="submit-btn-div">
@@ -88,29 +77,29 @@ const UserForm = () => {
               className="submit-btn"
               disableRipple
               sx={{
-              backgroundColor: 'transparent',
-              boxShadow: 'none',
-              border: 'none',
-              '&:hover': {
-                backgroundColor: 'transparent',
-                boxShadow: 'none',
-                border: 'none',
-              },
-              '&:focus': {
-                outline: 'none',
-                backgroundColor: 'transparent',
-                boxShadow: 'none',
-                border: 'none', 
-              },
-              '&:active': {
-                backgroundColor: 'transparent',
-                boxShadow: 'none',
-                border: 'none',
-              },
-            }}
+                backgroundColor: "transparent",
+                boxShadow: "none",
+                border: "none",
+                "&:hover": {
+                  backgroundColor: "transparent",
+                  boxShadow: "none",
+                  border: "none",
+                },
+                "&:focus": {
+                  outline: "none",
+                  backgroundColor: "transparent",
+                  boxShadow: "none",
+                  border: "none",
+                },
+                "&:active": {
+                  backgroundColor: "transparent",
+                  boxShadow: "none",
+                  border: "none",
+                },
+              }}
             >
               <p ref={sendMsgRef}>SEND THE MESSAGE</p>
-              <TelegramIcon />
+              <TelegramIcon className="tele-icon"/>
             </Button>
           </div>
         </div>
