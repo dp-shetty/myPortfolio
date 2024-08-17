@@ -13,8 +13,8 @@ function Home() {
       headContentRef.current.style.color = "white";
       bodyContentRef.current.style.color = "white";
     } else if (bodyBg === "#ffffff") {
-      headContentRef.current.style.color = "black";
-      bodyContentRef.current.style.color = "black";
+      headContentRef.current.style.color = "#666666";
+      bodyContentRef.current.style.color = "#949494";
     }
   }, [bodyBg]);
 

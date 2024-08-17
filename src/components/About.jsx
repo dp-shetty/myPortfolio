@@ -3,6 +3,7 @@ import "../SCSS/About.scss";
 import { useSelector } from "react-redux";
 import { FaDownload } from "react-icons/fa";
 import resume from "../assets/docs/Dps.pdf";
+import { NavLink } from "react-router-dom";
 
 function About() {
   let { bodyBg } = useSelector((state) => state.iconBg);
@@ -36,9 +37,9 @@ function About() {
     {
       FirstName: "DURGA PRASAD",
       Age: "23 Years",
-      Freelance: "Available",
+      Github: "dp-shetty",
       Phone: "+91-6362405153",
-      Skype: "live:.cid.a8c25624fccf1ce3",
+      Skype: "skype@dps",
       LastName: "T D",
       Nationality: "Indian",
       Address: "Banglore, INDIA",
@@ -67,19 +68,39 @@ function About() {
           <div id="infoBody" ref={p3ref}>
             {/* FIRST NAME COLUMN */}
             <div id="firstName">
-              {data.map(({ FirstName, Age, Freelance, Phone, Skype }, i) => {
+              {data.map(({ FirstName, Age, Github, Phone, Skype }, i) => {
                 return (
                   <React.Fragment key={i}>
                     <p>First Name : {FirstName}</p>
                     <p>Age : {Age}</p>
                     <p>
-                      Freelance :{" "}
-                      <span style={{ color: "rgb(8, 189, 8)" }}>
-                        {Freelance}
-                      </span>
+                      GITHUB :{" "}
+                      <NavLink
+                        to={"https://github.com/dp-shetty"}
+                        className={"no-underline text-current"}
+                        target="_blank"
+                      >
+                        {Github}
+                      </NavLink>
                     </p>
-                    <p>Phone : {Phone}</p>
-                    <p>Skype : {Skype}</p>
+                    <p>
+                      Phone :{" "}
+                      <NavLink
+                        to={"tel:+916362405153"}
+                        className={"no-underline text-current"}
+                      >
+                        {Phone}
+                      </NavLink>
+                    </p>
+                    <p>
+                      Skype :{" "}
+                      <NavLink
+                        to="skype:live:.cid.a8c25624fccf1ce3?chat"
+                        className={"no-underline text-current"}
+                      >
+                        {Skype}
+                      </NavLink>
+                    </p>
                   </React.Fragment>
                 );
               })}
@@ -94,7 +115,15 @@ function About() {
                       <p>Last Name : {LastName}</p>
                       <p>Nationality : {Nationality}</p>
                       <p>Address : {Address}</p>
-                      <p>Email : {Email}</p>
+                      <p>
+                        Email :{" "}
+                        <NavLink
+                          to={"mailto:dps2k811@gmail.com"}
+                          className={"no-underline text-current"}
+                        >
+                          {Email}
+                        </NavLink>
+                      </p>
                       <p>Languages : {Languages}</p>
                     </React.Fragment>
                   );
@@ -104,12 +133,12 @@ function About() {
           </div>
 
           <div id="downloadDiv">
-          <div className="dwdIcon">
-            <p ref={p4ref}>DOWNLOAD CV</p>
-            <a id="Dsvg" href={resume} target="_blank" ref={dwdAnchorRef}>
-              <FaDownload />
-            </a>
-          </div>
+            <div className="dwdIcon">
+              <p ref={p4ref}>DOWNLOAD CV</p>
+              <a id="Dsvg" href={resume} target="_blank" ref={dwdAnchorRef}>
+                <FaDownload />
+              </a>
+            </div>
           </div>
         </section>
 
