@@ -26,7 +26,8 @@
 }
 
 .contactBody {
-  width: 95%;
+  width: 93%;
+  margin: 2.8rem 0 0 1.3rem;
 
   .addressBody {
     width: 40%;
@@ -57,12 +58,10 @@
 .mail-icon svg,
 .call-icon svg {
   fill: #ffb400;
-  font-size: 2.5rem;
+  font-size: 2.8rem;
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-
-
   #contactHead {
     #head1 p {
       font-size: 3em;
@@ -80,7 +79,6 @@
     flex-direction: column;
     margin: auto;
     gap: 0.5rem;
-    
 
     .addressBody {
       width: 100%;
@@ -134,11 +132,5 @@
     }
 
     margin-bottom: 5.8rem;
-  }
-
-  .map-icon svg,
-  .mail-icon svg,
-  .call-icon svg {
-    font-size: 1.5em;
   }
 }
