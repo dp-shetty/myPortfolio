@@ -17,25 +17,40 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = async (values) => {
-    try {
-      const response = await axios.get("http://localhost:3000/users");
-      const users = response.data;
 
-      const newId =
-        users.length > 0
+  const formikOnsubmit = (values) => {
+    try {
+      // const response = await axios.get("http://localhost:3000/users");
+      // const users = response.data;
+      // const newId =
+      //   users.length > 0
+          // ? (
+      //         Math.max(...users.map((user) => parseInt(user.id, 10))) + 1
+      //       ).toString()
+      //     : "1";
+      // const newUser = { ...values, id: newId };
+      // await axios.post("http://localhost:3000/users", newUser);
+
+      const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
+      const localStorageId =
+        storedUsers.length > 0
           ? (
-              Math.max(...users.map((user) => parseInt(user.id, 10))) + 1
+              Math.max(...storedUsers.map((user) => parseInt(user.id, 10))) + 1
             ).toString()
           : "1";
 
-      const newUser = { ...values, id: newId };
+      const localStorageUser = { ...values, id: localStorageId };
 
-      await axios.post("http://localhost:3000/users", newUser);
+      localStorage.setItem(
+        "userData",
+        JSON.stringify([...storedUsers, localStorageUser])
+      );
     } catch (error) {
       console.error("Error submitting form:", error);
     }
   };
+  
+  
 
   const formikValidate = (values) => {
     const errors = {};
