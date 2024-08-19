@@ -12,6 +12,9 @@ export const TextFieldComponent = ({
   multiline = false,
   rows,
   children,
+  onBlur,
+  error,
+  touched,
 }) => {
   const [textfieldBorderColor, setTextfieldBorderColor] = useState("#ffb400");
   const [labelColor, setLabelColor] = useState("#666666");
@@ -33,8 +36,11 @@ export const TextFieldComponent = ({
     }
   }, [bodyBg]);
 
+  const borderColor = touched && error ? "red" : textfieldBorderColor;
+  const labelErrorColor = touched && error ? "red" : labelColor;
+
   return (
-    <TextField
+    <TextField 
       fullWidth
       label={label}
       type={type}
@@ -42,6 +48,7 @@ export const TextFieldComponent = ({
       value={value}
       onChange={onChange}
       select={select}
+      onBlur={onBlur}
       multiline={multiline}
       rows={rows}
       autoComplete="off"
@@ -50,40 +57,40 @@ export const TextFieldComponent = ({
         "& .MuiOutlinedInput-root": {
           backgroundColor: bodyBg,
           "& fieldset": {
-            borderColor: textfieldBorderColor,
+            borderColor: borderColor,
             borderRadius: "1.8rem",
             paddingLeft: "1.2rem",
           },
           "&:hover fieldset": {
-            borderColor: textfieldBorderColor,
+            borderColor: borderColor,
           },
           "&.Mui-focused fieldset": {
-            borderColor: textfieldBorderColor,
+            borderColor: borderColor,
           },
           "& input": {
-            color: labelColor,
+            color: labelErrorColor,
             backgroundColor: bodyBg,
             paddingLeft: "1.2rem",
           },
           "& .MuiSelect-select": {
-            color: labelColor,
+            color: labelErrorColor,
             paddingLeft: "1.2rem",
           },
           "& .MuiInputBase-inputMultiline": {
-            color: labelColor,
+            color: labelErrorColor,
             paddingLeft: "1.2rem",
           },
           "& input:-webkit-autofill": {
             boxShadow: `0 0 0 1000px ${bodyBg} inset`,
-            WebkitTextFillColor: labelColor,
+            WebkitTextFillColor: labelErrorColor,
           },
         },
         "& .MuiInputLabel-root": {
-          color: labelColor,
+          color: labelErrorColor,
           paddingLeft: "1.2rem",
         },
         "& .MuiInputLabel-root.Mui-focused": {
-          color: labelColor,
+          color: labelErrorColor,
         },
         "& .MuiSelect-icon": {
           color: iconColor,

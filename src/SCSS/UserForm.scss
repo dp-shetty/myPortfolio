@@ -2,9 +2,7 @@
   display: flex;
   justify-content: center;
 
-
-
-  .submit-btn{
+  .submit-btn {
     border: 1px solid #ffb400;
     border-radius: 2.5rem;
     padding: 0;
@@ -16,13 +14,13 @@
     cursor: pointer;
   }
 
-  .submit-btn:hover{
+  .submit-btn:hover {
     border: 1px solid #ffb400;
     background-color: #ffb400;
     transition: all 1.2s;
   }
 
-  p{
+  p {
     padding-left: 2rem;
   }
 
@@ -48,9 +46,20 @@
       gap: 0.3rem;
     }
 
-    .submit-btn-div{
+    .nameEmailErrors {
+      flex-direction: column;
+      gap: 0.5rem;
+      .nameError {
+        width: 100%;
+      }
+      .emailError {
+        width: 100%;
+      }
+    }
+
+    .submit-btn-div {
       padding-bottom: 1.2rem;
-      .submit-btn{
+      .submit-btn {
         width: 82%;
       }
 
@@ -58,7 +67,7 @@
         border-radius: 100%;
       }
 
-      p{
+      p {
         padding-left: 0.9rem;
       }
     }

@@ -1,0 +1,11 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "username": "Durga Prasad Shetty",
+      "useremail": "dps2k811@gmail.com",
+      "userrole": "contributor",
+      "comments": "I am a web-developer"
+    }
+  ]
+}
