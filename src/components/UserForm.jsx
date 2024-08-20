@@ -17,14 +17,13 @@ const UserForm = () => {
     comments: "",
   };
 
-
   const formikOnsubmit = (values) => {
     try {
       // const response = await axios.get("http://localhost:3000/users");
       // const users = response.data;
       // const newId =
       //   users.length > 0
-          // ? (
+      // ? (
       //         Math.max(...users.map((user) => parseInt(user.id, 10))) + 1
       //       ).toString()
       //     : "1";
@@ -49,8 +48,6 @@ const UserForm = () => {
       console.error("Error submitting form:", error);
     }
   };
-  
-  
 
   const formikValidate = (values) => {
     const errors = {};
@@ -87,29 +84,45 @@ const UserForm = () => {
   return (
     <Container className="formContainer p-0">
       <form onSubmit={handleSubmit} className="userForm">
-        <div className="name-email-textfield flex justify-center items-center gap-8">
-          <TextFieldComponent
-            label="Name"
-            name="username"
-            value={values.username}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            type="text"
-            error={touched.username && errors.username}
-            touched={touched.username}
-          />
-          <TextFieldComponent
-            label="Email"
-            name="useremail"
-            value={values.useremail}
-            onChange={handleChange}
-            onBlur={handleBlur}
-            type="email"
-            error={touched.useremail && errors.useremail}
-            touched={touched.useremail}
-          />
+        <div className="name-email-textfield flex flex-wrap justify-center items-center gap-8">
+          <div className="w-full lg:w-auto flex flex-col items-center">
+            <TextFieldComponent
+              label="Name"
+              name="username"
+              value={values.username}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              type="text"
+              error={touched.username && errors.username}
+              touched={touched.username}
+            />
+            {touched.username && errors.username && (
+              <div className="nameError text-red-600 block lg:hidden">
+                {errors.username}
+              </div>
+            )}
+          </div>
+
+          <div className="w-full lg:w-auto flex flex-col items-center">
+            <TextFieldComponent
+              label="Email"
+              name="useremail"
+              value={values.useremail}
+              onChange={handleChange}
+              onBlur={handleBlur}
+              type="email"
+              error={touched.useremail && errors.useremail}
+              touched={touched.useremail}
+            />
+            {touched.useremail && errors.useremail && (
+              <div className="emailError text-red-600 block lg:hidden">
+                {errors.useremail}
+              </div>
+            )}
+          </div>
         </div>
-        <div className="nameEmailErrors flex w-full justify-center">
+
+        <div className="nameEmailErrors flex w-full justify-center hidden lg:flex">
           {touched.username && errors.username && (
             <div className="nameError w-1/2 flex justify-center items-center text-red-600">
               {errors.username}
@@ -121,6 +134,7 @@ const UserForm = () => {
             </div>
           )}
         </div>
+
         <TextFieldComponent
           select
           label="Who you are"
