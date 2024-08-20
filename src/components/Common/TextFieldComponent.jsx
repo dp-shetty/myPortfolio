@@ -15,6 +15,9 @@ export const TextFieldComponent = ({
   onBlur,
   error,
   touched,
+  height = "2rem",
+  fontSize = "1em",
+  selectFontSize = "1em",
 }) => {
   const [textfieldBorderColor, setTextfieldBorderColor] = useState("#ffb400");
   const [labelColor, setLabelColor] = useState("#666666");
@@ -40,7 +43,7 @@ export const TextFieldComponent = ({
   const labelErrorColor = touched && error ? "red" : labelColor;
 
   return (
-    <TextField 
+    <TextField
       fullWidth
       label={label}
       type={type}
@@ -53,6 +56,8 @@ export const TextFieldComponent = ({
       rows={rows}
       autoComplete="off"
       margin="normal"
+      // height={height}
+      // fontSize={fontSize}
       sx={{
         "& .MuiOutlinedInput-root": {
           backgroundColor: bodyBg,
@@ -71,14 +76,23 @@ export const TextFieldComponent = ({
             color: labelErrorColor,
             backgroundColor: bodyBg,
             paddingLeft: "1.2rem",
+            height: height,
+            fontSize: fontSize,
+            lineHeight: height,
           },
           "& .MuiSelect-select": {
             color: labelErrorColor,
             paddingLeft: "1.2rem",
+            height: height,
+            fontSize: fontSize,
+            lineHeight: height,
           },
           "& .MuiInputBase-inputMultiline": {
             color: labelErrorColor,
             paddingLeft: "1.2rem",
+            height: height,
+            fontSize: fontSize,
+            lineHeight: height,
           },
           "& input:-webkit-autofill": {
             boxShadow: `0 0 0 1000px ${bodyBg} inset`,
@@ -88,6 +102,7 @@ export const TextFieldComponent = ({
         "& .MuiInputLabel-root": {
           color: labelErrorColor,
           paddingLeft: "1.2rem",
+          fontSize: fontSize,
         },
         "& .MuiInputLabel-root.Mui-focused": {
           color: labelErrorColor,
@@ -100,6 +115,7 @@ export const TextFieldComponent = ({
         },
         "& .MuiMenuItem-root": {
           color: menuItemColor,
+          fontSize: selectFontSize,
         },
       }}
     >

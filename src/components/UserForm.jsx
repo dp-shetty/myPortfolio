@@ -19,17 +19,6 @@ const UserForm = () => {
 
   const formikOnsubmit = (values) => {
     try {
-      // const response = await axios.get("http://localhost:3000/users");
-      // const users = response.data;
-      // const newId =
-      //   users.length > 0
-      // ? (
-      //         Math.max(...users.map((user) => parseInt(user.id, 10))) + 1
-      //       ).toString()
-      //     : "1";
-      // const newUser = { ...values, id: newId };
-      // await axios.post("http://localhost:3000/users", newUser);
-
       const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
       const localStorageId =
         storedUsers.length > 0
@@ -84,8 +73,8 @@ const UserForm = () => {
   return (
     <Container className="formContainer p-0">
       <form onSubmit={handleSubmit} className="userForm">
-        <div className="name-email-textfield flex flex-wrap justify-center items-center gap-8">
-          <div className="w-full lg:w-auto flex flex-col items-center">
+        <div className="name-email-textfield flex flex-col justify-center items-center">
+          <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Name"
               name="username"
@@ -95,15 +84,17 @@ const UserForm = () => {
               type="text"
               error={touched.username && errors.username}
               touched={touched.username}
+              height="1.2rem"
+              fontSize="0.875rem"
             />
             {touched.username && errors.username && (
-              <div className="nameError text-red-600 block lg:hidden">
+              <div className="nameError text-red-600 text-sm">
                 {errors.username}
               </div>
             )}
           </div>
 
-          <div className="w-full lg:w-auto flex flex-col items-center">
+          <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Email"
               name="useremail"
@@ -113,16 +104,16 @@ const UserForm = () => {
               type="email"
               error={touched.useremail && errors.useremail}
               touched={touched.useremail}
+              height="1.2rem"
+              fontSize="0.875rem"
             />
             {touched.useremail && errors.useremail && (
-              <div className="emailError text-red-600 block lg:hidden">
-                {errors.useremail}
-              </div>
+              <div className="emailError text-red-600 text-sm">{errors.useremail}</div>
             )}
           </div>
         </div>
 
-        <div className="nameEmailErrors flex w-full justify-center hidden lg:flex">
+        {/* <div className="nameEmailErrors flex w-full justify-center hidden lg:flex">
           {touched.username && errors.username && (
             <div className="nameError w-1/2 flex justify-center items-center text-red-600">
               {errors.username}
@@ -133,7 +124,7 @@ const UserForm = () => {
               {errors.useremail}
             </div>
           )}
-        </div>
+        </div> */}
 
         <TextFieldComponent
           select
@@ -144,13 +135,16 @@ const UserForm = () => {
           onBlur={handleBlur}
           error={touched.userrole && errors.userrole}
           touched={touched.userrole}
+          height="1.2rem"
+          fontSize="0.875rem"
+          selectFontSize="0.875rem"
         >
           <MenuItem value="interviewer">INTERVIEWER</MenuItem>
           <MenuItem value="visiter">VISITER</MenuItem>
           <MenuItem value="contributor">OPEN-SOURCE CONTRIBUTOR</MenuItem>
         </TextFieldComponent>
         {touched.userrole && errors.userrole && (
-          <div className="flex justify-center items-center text-red-600">
+          <div className="flex justify-center items-center text-red-600 text-sm">
             {errors.userrole}
           </div>
         )}
