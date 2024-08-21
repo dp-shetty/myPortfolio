@@ -5,15 +5,8 @@
 }
 
 #secHead {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   margin: 1.5rem auto;
 
-  #head1 {
-    position: absolute;
-    z-index: -1;
-  }
   #head1 p {
     font-size: 100px;
     font-weight: 800;

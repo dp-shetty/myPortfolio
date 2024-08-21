@@ -73,7 +73,7 @@ const UserForm = () => {
   return (
     <Container className="formContainer p-0">
       <form onSubmit={handleSubmit} className="userForm">
-        <div className="name-email-textfield flex flex-col justify-center items-center">
+        <div className="name-email-textfield mob:w-full flex flex-col justify-center items-center">
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Name"
@@ -113,19 +113,6 @@ const UserForm = () => {
           </div>
         </div>
 
-        {/* <div className="nameEmailErrors flex w-full justify-center hidden lg:flex">
-          {touched.username && errors.username && (
-            <div className="nameError w-1/2 flex justify-center items-center text-red-600">
-              {errors.username}
-            </div>
-          )}
-          {touched.useremail && errors.useremail && (
-            <div className="emailError w-1/2 flex justify-center items-center text-red-600">
-              {errors.useremail}
-            </div>
-          )}
-        </div> */}
-
         <TextFieldComponent
           select
           label="Who you are"
@@ -157,10 +144,10 @@ const UserForm = () => {
           rows={4}
         />
         <div>
-          <div className="submit-btn-div">
+          <div className="submit-btn-div flex justify-center">
             <Button
               type="submit"
-              className="submit-btn"
+              className="submit-btn border border-solid border-pfpYellow"
               disableRipple
               sx={{
                 backgroundColor: "transparent",
@@ -185,7 +172,7 @@ const UserForm = () => {
               }}
             >
               <p ref={sendMsgRef}>SEND THE MESSAGE</p>
-              <TelegramIcon className="tele-icon" />
+              <TelegramIcon className="tele-icon mob:rounded-full text-white bg-pfpYellow" />
             </Button>
           </div>
         </div>
