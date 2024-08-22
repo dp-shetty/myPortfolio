@@ -17,8 +17,13 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = (values) => {
+  const formikOnsubmit = async(values) => {
     try {
+      await axios.post('https://my-portfolio-backend-liart.vercel.app/users', values,{
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
       const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
       const localStorageId =
         storedUsers.length > 0
