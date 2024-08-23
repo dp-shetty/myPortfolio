@@ -18,6 +18,8 @@ const UserForm = () => {
   };
 
   const formikOnsubmit = async (values) => {
+
+    console.log(values)
     try {
       await axios.post(
         "https://my-portfolio-backend-liart.vercel.app/users",
