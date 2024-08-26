@@ -6,6 +6,78 @@ Hey there, curious mind! You've just stumbled upon the code behind my personal p
 
 Why wait? Experience the live version of my portfolio in all its glory right [here](https://dpshetty.netlify.app/). Spoiler alert: It's as awesome as you'd imagine!
 
+## 🖼️ Screenshots
+
+Here’s a glimpse of what you can explore, categorized for different modes and devices:
+
+### 🌙 Web Dark Mode
+
+- **🏠 Home:**
+  ![Home Dark Mode](@src/assets/images/readmeImages/Home_Dark.jpg)
+
+- **👤 About Me:**
+  ![About Me Dark Mode](@src/assets/images/readmeImages/)
+
+- **💻 Projects:**
+  ![Projects Dark Mode](@src/assets/images/readmeImages/)
+
+- **🛠️ Skills:**
+  ![Skills Dark Mode](@src/assets/images/readmeImages/)
+
+- **📬 Contact:**
+  ![Contact Dark Mode](@src/assets/images/readmeImages/)
+
+### 🌞 Web Light Mode
+
+- **🏠 Home:**
+  ![Home Light Mode](@src/assets/images/readmeImages/Home_Light.jpg)
+
+- **👤 About Me:**
+  ![About Me Light Mode](https://via.placeholder.com/800x400?text=About+Me+Light+Mode+Screenshot)
+
+- **💻 Projects:**
+  ![Projects Light Mode](https://via.placeholder.com/800x400?text=Projects+Light+Mode+Screenshot)
+
+- **🛠️ Skills:**
+  ![Skills Light Mode](https://via.placeholder.com/800x400?text=Skills+Light+Mode+Screenshot)
+
+- **📬 Contact:**
+  ![Contact Light Mode](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot)
+
+### 📱 Mobile Dark Mode
+
+- **🏠 Home:**
+  ![Home Mobile Dark Mode](https://via.placeholder.com/800x400?text=Home+Mobile+Dark+Mode+Screenshot)
+
+- **👤 About Me:**
+  ![About Me Mobile Dark Mode](https://via.placeholder.com/800x400?text=About+Me+Mobile+Dark+Mode+Screenshot)
+
+- **💻 Projects:**
+  ![Projects Mobile Dark Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Dark+Mode+Screenshot)
+
+- **🛠️ Skills:**
+  ![Skills Mobile Dark Mode](https://via.placeholder.com/800x400?text=Skills+Mobile+Dark+Mode+Screenshot)
+
+- **📬 Contact:**
+  ![Contact Mobile Dark Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Dark+Mode+Screenshot)
+
+### 📱 Mobile Light Mode
+
+- **🏠 Home:**
+  ![Home Mobile Light Mode](https://via.placeholder.com/800x400?text=Home+Mobile+Light+Mode+Screenshot)
+
+- **👤 About Me:**
+  ![About Me Mobile Light Mode](https://via.placeholder.com/800x400?text=About+Me+Mobile+Light+Mode+Screenshot)
+
+- **💻 Projects:**
+  ![Projects Mobile Light Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Light+Mode+Screenshot)
+
+- **🛠️ Skills:**
+  ![Skills Mobile Light Mode](https://via.placeholder.com/800x400?text=Skills+Mobile+Light+Mode+Screenshot)
+
+- **📬 Contact:**
+  ![Contact Mobile Light Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Light+Mode+Screenshot)
+
 ## 🎨 What Awaits You
 
 - **🏠 Home:** A quick glimpse into my journey as a developer, showcasing my skills and what drives me.
@@ -18,9 +90,60 @@ Why wait? Experience the live version of my portfolio in all its glory right [he
 
 Here's what powers this digital masterpiece:
 
-- **Frontend:** HTML5, CSS3, JavaScript—because what's a website without the classics?
-- **Frameworks & Libraries:** React.js for that sweet, reactive goodness, Tailwind CSS for styling with ease, SCSS/SASS for advanced CSS fun, Material-UI (MUI) for sleek components, Formik for form management, and Redux Toolkit for state management magic.
-- **Deployment:** Hosted with love and care on Netlify and Vercel—because fast, reliable, and secure is how I roll.
+### Frontend
+
+- **Languages:**
+  - **HTML5** 🌐
+  - **CSS3** 🎨
+  - **JavaScript** 💻
+- **Frameworks & Libraries:** 
+  - **React.js** ⚛️ for dynamic user interfaces.
+  - **Emotion** 🎨 for CSS-in-JS styling.
+  - **Redux Toolkit** 🛠️ for state management magic.
+  - **React Router 6** 🗺️ for routing.
+  - **Material-UI (MUI)** 💅 for sleek components.
+  - **Formik** 📋 for form management.
+- **Styling:**
+  - **Tailwind CSS** 🌬️ for utility-first styling.
+  - **SCSS/SASS** ✨ for advanced CSS.
+- **Font Scripts:** **Google Font API** 🔠 for custom typography.
+- **Deployment:** 
+  - **Netlify** 🚀 and **Vercel** 🌟 for hosting.
+
+### Backend
+
+- **Languages:** **Node.js** 🟢
+- **Frameworks & Libraries:** 
+  - **Express** 🛠️ for web framework and server.
+  - **Redux** 🛠️ for state management (shared with frontend).
+- **Security:** **HSTS** 🔒 for security headers.
+- **Deployment:** **Vercel** 🌟 for seamless backend operations.
+- **Live Backend:** Check out the live backend [here](https://your-backend-deployment-url.vercel.app) 🌐
+
+## 🗂️ Backend JSON
+
+Here’s an example of the JSON format used in the backend:
+
+```json
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John Doe",
+      "useremail": "john.doe@example.com",
+      "userrole": "https://via.placeholder.com/150",
+      "comments":"fcasdwx"
+    },
+    {
+      "id": 2,
+      "username": "Jane Smith",
+      "useremail": "jane.smith@example.com",
+      "userrole": "https://via.placeholder.com/150",
+      "comments":"fcasdwx"
+    }
+  ]
+}
+
 
 ## 🚧 Ready to Dive In?
 
@@ -30,21 +153,6 @@ Fancy a peek behind the scenes? Here’s how you can get started:
 
    ```bash
    git clone https://github.com/dp-shetty/myPortfolio.git
-
-2. **Navigate to the project directory:**
-
-   ```bash
-   cd myPortfolio
-
-3. **Install the goodies:**
-
-   ```bash
-   npm install
-
-4. **Fire up the development server:**
-
-   ```bash
-   npm run dev
 
 🚀 Deployment & Updates
 This site is always up-to-date, thanks to automatic deployments on Netlify and Vercel. Every push to the main branch triggers a fresh deployment—so you’re always seeing the latest and greatest.
