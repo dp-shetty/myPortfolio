@@ -17,7 +17,7 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = async (values) => {
+  const formikOnsubmit = async (values,{resetForm}) => {
 
     console.log(values)
     try {
@@ -44,6 +44,7 @@ const UserForm = () => {
         "userData",
         JSON.stringify([...storedUsers, localStorageUser])
       );
+      resetForm()
     } catch (error) {
       console.error("Error submitting form:", error);
     }
@@ -165,7 +166,6 @@ const UserForm = () => {
               sx={{
                 backgroundColor: "transparent",
                 boxShadow: "none",
-                border: "none",
                 "&:hover": {
                   backgroundColor: "transparent",
                   boxShadow: "none",
