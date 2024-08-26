@@ -13,24 +13,24 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
 ### 🌙 Web Dark Mode
 
 - **🏠 Home:**
-  ![Home Dark Mode](@src/assets/images/readmeImages/Home_Dark.jpg)
+  ![Home Dark Mode](./src/assets/images/readmeImages/Home_Dark.jpg)
 
 - **👤 About Me:**
-  ![About Me Dark Mode](@src/assets/images/readmeImages/)
+  ![About Me Dark Mode](./src/assets/images/readmeImages/)
 
 - **💻 Projects:**
-  ![Projects Dark Mode](@src/assets/images/readmeImages/)
+  ![Projects Dark Mode](./src/assets/images/readmeImages/)
 
 - **🛠️ Skills:**
-  ![Skills Dark Mode](@src/assets/images/readmeImages/)
+  ![Skills Dark Mode](./src/assets/images/readmeImages/)
 
 - **📬 Contact:**
-  ![Contact Dark Mode](@src/assets/images/readmeImages/)
+  ![Contact Dark Mode](./src/assets/images/readmeImages/)
 
 ### 🌞 Web Light Mode
 
 - **🏠 Home:**
-  ![Home Light Mode](@src/assets/images/readmeImages/Home_Light.jpg)
+  ![Home Light Mode](./src/assets/images/readmeImages/Home_Light.jpg)
 
 - **👤 About Me:**
   ![About Me Light Mode](https://via.placeholder.com/800x400?text=About+Me+Light+Mode+Screenshot)
