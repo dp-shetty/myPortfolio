@@ -17,9 +17,7 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = async (values,{resetForm}) => {
-
-    console.log(values)
+  const formikOnsubmit = async (values) => {
     try {
       await axios.post(
         "https://my-portfolio-backend-liart.vercel.app/users",
@@ -44,7 +42,6 @@ const UserForm = () => {
         "userData",
         JSON.stringify([...storedUsers, localStorageUser])
       );
-      resetForm()
     } catch (error) {
       console.error("Error submitting form:", error);
     }
