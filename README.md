@@ -145,7 +145,7 @@ Here’s an example of the JSON format used in the backend:
 };
 
 
-## 🚧 Ready to Dive In?
+# 🚧 Ready to Dive In?
 
 Fancy a peek behind the scenes? Here’s how you can get started:
 
