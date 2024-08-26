@@ -16,16 +16,16 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![Home Dark Mode](./src/assets/images/readmeImages/Home_Dark.jpg)
 
 - **👤 About Me:**
-  ![About Me Dark Mode](./src/assets/images/readmeImages/)
+  ![About Me Dark Mode](./src/assets/images/readmeImages/About_Dark.jpg)
 
-- **💻 Projects:**
-  ![Projects Dark Mode](./src/assets/images/readmeImages/)
+- **💻 Portfolio:**
+  ![Portfolio Dark Mode](./src/assets/images/readmeImages/)
 
-- **🛠️ Skills:**
-  ![Skills Dark Mode](./src/assets/images/readmeImages/)
+- **🛠️ Contact:**
+  ![Contact Dark Mode](./src/assets/images/readmeImages/Contact_Dark.jpg)
 
-- **📬 Contact:**
-  ![Contact Dark Mode](./src/assets/images/readmeImages/)
+- **📬 Blog:**
+  ![Blog Dark Mode](./src/assets/images/readmeImages/)
 
 ### 🌞 Web Light Mode
 
@@ -33,50 +33,50 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![Home Light Mode](./src/assets/images/readmeImages/Home_Light.jpg)
 
 - **👤 About Me:**
-  ![About Me Light Mode](https://via.placeholder.com/800x400?text=About+Me+Light+Mode+Screenshot)
+  ![About Me Light Mode](./src/assets/images/readmeImages/About_Light.jpg)
 
-- **💻 Projects:**
-  ![Projects Light Mode](https://via.placeholder.com/800x400?text=Projects+Light+Mode+Screenshot)
+- **💻 Portfolio:**
+  ![Portfolio Light Mode](https://via.placeholder.com/800x400?text=Projects+Light+Mode+Screenshot)
 
-- **🛠️ Skills:**
-  ![Skills Light Mode](https://via.placeholder.com/800x400?text=Skills+Light+Mode+Screenshot)
+- **🛠️ Contact:**
+  ![Contact Light Mode](./src/assets/images/readmeImages/Contact_Light.jpg)
 
-- **📬 Contact:**
-  ![Contact Light Mode](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot)
+- **📬 Blog:**
+  ![Blog Light Mode](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot)
 
 ### 📱 Mobile Dark Mode
 
 - **🏠 Home:**
-  ![Home Mobile Dark Mode](https://via.placeholder.com/800x400?text=Home+Mobile+Dark+Mode+Screenshot)
+  ![Home Mobile Dark Mode](./src/assets/images/readmeImages/Home_mobDark.jpg)
 
 - **👤 About Me:**
-  ![About Me Mobile Dark Mode](https://via.placeholder.com/800x400?text=About+Me+Mobile+Dark+Mode+Screenshot)
+  ![About Me Mobile Dark Mode](./src/assets/images/readmeImages/About_mobDark.jpg)
 
-- **💻 Projects:**
-  ![Projects Mobile Dark Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Dark+Mode+Screenshot)
+- **💻 Portfolio:**
+  ![Portfolio Mobile Dark Mode]([./src/assets/images/readmeImages/Portfolio_mobDark.jpg](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot))
 
-- **🛠️ Skills:**
-  ![Skills Mobile Dark Mode](https://via.placeholder.com/800x400?text=Skills+Mobile+Dark+Mode+Screenshot)
+- **🛠️ Contact:**
+  ![Contact Mobile Dark Mode](./src/assets/images/readmeImages/Contact_mobDark.jpg)
 
-- **📬 Contact:**
-  ![Contact Mobile Dark Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Dark+Mode+Screenshot)
+- **📬 Blog:**
+  ![Blog Mobile Dark Mode]([./src/assets/images/readmeImages/About_mobDark.jpg](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot))
 
 ### 📱 Mobile Light Mode
 
 - **🏠 Home:**
-  ![Home Mobile Light Mode](https://via.placeholder.com/800x400?text=Home+Mobile+Light+Mode+Screenshot)
+  ![Home Mobile Light Mode](./src/assets/images/readmeImages/Home_mobLight.jpg)
 
 - **👤 About Me:**
-  ![About Me Mobile Light Mode](https://via.placeholder.com/800x400?text=About+Me+Mobile+Light+Mode+Screenshot)
+  ![About Me Mobile Light Mode](./src/assets/images/readmeImages/About_mobLight.jpg)
 
-- **💻 Projects:**
-  ![Projects Mobile Light Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Light+Mode+Screenshot)
+- **💻 Portfolio:**
+  ![Portfolio Mobile Light Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Light+Mode+Screenshot)
 
-- **🛠️ Skills:**
-  ![Skills Mobile Light Mode](https://via.placeholder.com/800x400?text=Skills+Mobile+Light+Mode+Screenshot)
+- **🛠️ Contact:**
+  ![Contact Mobile Light Mode](./src/assets/images/readmeImages/Contact_mobLight.jpg)
 
-- **📬 Contact:**
-  ![Contact Mobile Light Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Light+Mode+Screenshot)
+- **📬 Blog:**
+  ![Blog Mobile Light Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Light+Mode+Screenshot)
 
 ## 🎨 What Awaits You
 
