@@ -142,7 +142,7 @@ Here’s an example of the JSON format used in the backend:
       "comments":"fcasdwx"
     }
   ]
-}
+};
 
 
 ## 🚧 Ready to Dive In?
@@ -153,6 +153,21 @@ Fancy a peek behind the scenes? Here’s how you can get started:
 
    ```bash
    git clone https://github.com/dp-shetty/myPortfolio.git
+
+2. **Navigate to the project directory:**
+
+   ```bash
+   cd myPortfolio
+
+3. **Install the goodies:**
+
+   ```bash
+   npm install
+
+4. **Fire up the development server:**
+
+   ```bash
+   npm run dev
 
 🚀 Deployment & Updates
 This site is always up-to-date, thanks to automatic deployments on Netlify and Vercel. Every push to the main branch triggers a fresh deployment—so you’re always seeing the latest and greatest.
