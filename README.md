@@ -19,13 +19,13 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![About Me Dark Mode](./src/assets/images/readmeImages/About_Dark.jpg)
 
 - **💻 Portfolio:**
-  ![Portfolio Dark Mode](./src/assets/images/readmeImages/)
+  ![Portfolio Dark Mode](https://via.placeholder.com/800x400?text=Portfolio+Dark+Mode+Screenshot)
 
 - **🛠️ Contact:**
   ![Contact Dark Mode](./src/assets/images/readmeImages/Contact_Dark.jpg)
 
 - **📬 Blog:**
-  ![Blog Dark Mode](./src/assets/images/readmeImages/)
+  ![Blog Dark Mode](https://via.placeholder.com/800x400?text=Blog+Dark+Mode+Screenshot)
 
 ### 🌞 Web Light Mode
 
@@ -36,13 +36,13 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![About Me Light Mode](./src/assets/images/readmeImages/About_Light.jpg)
 
 - **💻 Portfolio:**
-  ![Portfolio Light Mode](https://via.placeholder.com/800x400?text=Projects+Light+Mode+Screenshot)
+  ![Portfolio Light Mode](https://via.placeholder.com/800x400?text=Portfolio+DaLightrk+Mode+Screenshot)
 
 - **🛠️ Contact:**
   ![Contact Light Mode](./src/assets/images/readmeImages/Contact_Light.jpg)
 
 - **📬 Blog:**
-  ![Blog Light Mode](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot)
+  ![Blog Light Mode](https://via.placeholder.com/800x400?text=Blog+Light+Mode+Screenshot)
 
 ### 📱 Mobile Dark Mode
 
@@ -53,13 +53,13 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![About Me Mobile Dark Mode](./src/assets/images/readmeImages/About_mobDark.jpg)
 
 - **💻 Portfolio:**
-  ![Portfolio Mobile Dark Mode]([./src/assets/images/readmeImages/Portfolio_mobDark.jpg](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot))
+  ![Portfolio Mobile Dark Mode](https://via.placeholder.com/800x400?text=Portfolio+Mobile+Dark+Mode+Screenshot)
 
 - **🛠️ Contact:**
   ![Contact Mobile Dark Mode](./src/assets/images/readmeImages/Contact_mobDark.jpg)
 
 - **📬 Blog:**
-  ![Blog Mobile Dark Mode]([./src/assets/images/readmeImages/About_mobDark.jpg](https://via.placeholder.com/800x400?text=Contact+Light+Mode+Screenshot))
+  ![Blog Mobile Dark Mode](https://via.placeholder.com/800x400?text=Blog+Mobile+Dark+Mode+Screenshot)
 
 ### 📱 Mobile Light Mode
 
@@ -70,13 +70,13 @@ Here’s a glimpse of what you can explore, categorized for different modes and 
   ![About Me Mobile Light Mode](./src/assets/images/readmeImages/About_mobLight.jpg)
 
 - **💻 Portfolio:**
-  ![Portfolio Mobile Light Mode](https://via.placeholder.com/800x400?text=Projects+Mobile+Light+Mode+Screenshot)
+  ![Portfolio Mobile Light Mode](https://via.placeholder.com/800x400?text=Portfolio+Mobile+Light+Mode+Screenshot)
 
 - **🛠️ Contact:**
   ![Contact Mobile Light Mode](./src/assets/images/readmeImages/Contact_mobLight.jpg)
 
 - **📬 Blog:**
-  ![Blog Mobile Light Mode](https://via.placeholder.com/800x400?text=Contact+Mobile+Light+Mode+Screenshot)
+  ![Blog Mobile Light Mode](https://via.placeholder.com/800x400?text=Blog+Mobile+Light+Mode+Screenshot)
 
 ## 🎨 What Awaits You
 
@@ -118,53 +118,9 @@ Here's what powers this digital masterpiece:
   - **Redux** 🛠️ for state management (shared with frontend).
 - **Security:** **HSTS** 🔒 for security headers.
 - **Deployment:** **Vercel** 🌟 for seamless backend operations.
-- **Live Backend:** Check out the live backend [here](https://your-backend-deployment-url.vercel.app) 🌐
+- **Live Backend:** Check out the live backend [here](https://my-portfolio-backend-liart.vercel.app/users) 🌐
 
-## 🗂️ Backend JSON
-
-Here’s an example of the JSON format used in the backend:
-
-```json
-{
-  "users": [
-    {
-      "id": 1,
-      "username": "John Doe",
-      "useremail": "john.doe@example.com",
-      "userrole": "https://via.placeholder.com/150",
-      "comments":"fcasdwx"
-    },
-    {
-      "id": 2,
-      "username": "Jane Smith",
-      "useremail": "jane.smith@example.com",
-      "userrole": "https://via.placeholder.com/150",
-      "comments":"fcasdwx"
-    }
-  ]
-}
-
-{
-  "users": [
-    {
-      "id": 1,
-      "username": "John Doe",
-      "useremail": "john.doe@example.com",
-      "userrole": "https://via.placeholder.com/150",
-      "comments":"fcasdwx"
-    },
-    {
-      "id": 2,
-      "username": "Jane Smith",
-      "useremail": "jane.smith@example.com",
-      "userrole": "https://via.placeholder.com/150",
-      "comments":"fcasdwx"
-    }
-  ]
-};
-
-
-🚧 Ready to Dive In?
+## 🚧 Ready to Dive In?
 
 Fancy a peek behind the scenes? Here’s how you can get started:
 
@@ -202,4 +158,3 @@ I’d love to hear from you! Whether it's for a project, a chat, or just to say 
 
 - **Email:** <dps2k811@gmail.com>
 - **LinkedIn:** [in/dps811](https://www.linkedin.com/in/dps811/)
-  
