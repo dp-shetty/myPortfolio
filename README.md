@@ -142,10 +142,29 @@ Here’s an example of the JSON format used in the backend:
       "comments":"fcasdwx"
     }
   ]
+}
+
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "John Doe",
+      "useremail": "john.doe@example.com",
+      "userrole": "https://via.placeholder.com/150",
+      "comments":"fcasdwx"
+    },
+    {
+      "id": 2,
+      "username": "Jane Smith",
+      "useremail": "jane.smith@example.com",
+      "userrole": "https://via.placeholder.com/150",
+      "comments":"fcasdwx"
+    }
+  ]
 };
 
 
-# 🚧 Ready to Dive In?
+🚧 Ready to Dive In?
 
 Fancy a peek behind the scenes? Here’s how you can get started:
 
