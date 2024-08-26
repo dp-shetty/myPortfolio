@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { MenuItem, Button, Container } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import "../SCSS/UserForm.scss";
@@ -6,9 +6,11 @@ import { useSelector } from "react-redux";
 import { TextFieldComponent } from "./Common/TextFieldComponent";
 import { useFormik } from "formik";
 import axios from "axios";
+import toast, { Toaster } from "react-hot-toast";
 
 const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+  // const submitSuccess = toast()
 
   const formikInitialValues = {
     username: "",
@@ -28,22 +30,16 @@ const UserForm = () => {
           },
         }
       );
-      const storedUsers = JSON.parse(localStorage.getItem("userData")) || [];
-      const localStorageId =
-        storedUsers.length > 0
-          ? (
-              Math.max(...storedUsers.map((user) => parseInt(user.id, 10))) + 1
-            ).toString()
-          : "1";
-
-      const localStorageUser = { ...values, id: localStorageId };
-
-      localStorage.setItem(
-        "userData",
-        JSON.stringify([...storedUsers, localStorageUser])
-      );
+      toast.success("Form submitted successfully!", {
+        className:
+          "bg-toast-success text-toast-text rounded-toast p-toast shadow-toast",
+      });
     } catch (error) {
       console.error("Error submitting form:", error);
+      toast.error("Failed to submit the form.", {
+        className:
+          "bg-toast-error text-toast-text rounded-toast p-toast shadow-toast",
+      });
     }
   };
 
@@ -158,7 +154,7 @@ const UserForm = () => {
           <div className="submit-btn-div flex justify-center">
             <Button
               type="submit"
-              className="submit-btn border border-solid border-pfpYellow"
+              className="submit-btn"
               disableRipple
               sx={{
                 backgroundColor: "transparent",
@@ -166,27 +162,25 @@ const UserForm = () => {
                 "&:hover": {
                   backgroundColor: "transparent",
                   boxShadow: "none",
-                  border: "none",
                 },
                 "&:focus": {
                   outline: "none",
                   backgroundColor: "transparent",
                   boxShadow: "none",
-                  border: "none",
                 },
                 "&:active": {
                   backgroundColor: "transparent",
                   boxShadow: "none",
-                  border: "none",
                 },
               }}
             >
               <p ref={sendMsgRef}>SEND THE MESSAGE</p>
-              <TelegramIcon className="tele-icon mob:rounded-full text-white bg-pfpYellow" />
+              <TelegramIcon className="tele-icon mob:rounded-full text-white bg-pfp-yellow" />
             </Button>
           </div>
         </div>
       </form>
+      <Toaster />
     </Container>
   );
 };
