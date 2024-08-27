@@ -18,6 +18,7 @@ export const TextFieldComponent = ({
   height = "2rem",
   fontSize = "1em",
   selectFontSize = "1em",
+  className,
 }) => {
   const [textfieldBorderColor, setTextfieldBorderColor] = useState("#ffb400");
   const [labelColor, setLabelColor] = useState("#666666");
@@ -56,6 +57,7 @@ export const TextFieldComponent = ({
       rows={rows}
       autoComplete="off"
       margin="normal"
+      className={className}
       // height={height}
       // fontSize={fontSize}
       sx={{

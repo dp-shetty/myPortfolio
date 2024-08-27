@@ -4,6 +4,7 @@ import { useSelector } from "react-redux";
 import { FaDownload } from "react-icons/fa";
 import resume from "../assets/docs/Dps.pdf";
 import { NavLink } from "react-router-dom";
+import PortfolioButton from "./Common/Portfolio Button/PortfolioButton";
 
 function About() {
   let { bodyBg } = useSelector((state) => state.iconBg);
@@ -132,14 +133,14 @@ function About() {
             </div>
           </div>
 
-          <div id="downloadDiv">
-            <div className="dwdIcon">
-              <p ref={p4ref}>DOWNLOAD CV</p>
-              <a id="Dsvg" href={resume} target="_blank" ref={dwdAnchorRef}>
-                <FaDownload />
-              </a>
-            </div>
-          </div>
+          <PortfolioButton
+            text="DOWNLOAD CV"
+            icon={FaDownload}
+            href={resume}
+            target="_blank"
+            pRef={p4ref}
+            aRef={dwdAnchorRef} 
+          />
         </section>
 
         <section id="secBody2" ref={secBody2Ref}>

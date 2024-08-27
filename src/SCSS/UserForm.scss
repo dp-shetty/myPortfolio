@@ -1,29 +1,15 @@
-.submit-btn-div {
-  .submit-btn {
-    border: 1px solid #ffb400;
-    border-radius: 2.5rem;
-    padding: 0;
-    width: 37%;
-    display: flex;
-    justify-content: space-between;
-    margin: 1.3rem auto;
-    height: 3.5rem;
-    cursor: pointer;
-    .tele-icon {
-      height: 100%;
-      width: 20%;
-      border-radius: 35px;
-    }
+.userForm {
+  .css-i4bv87-MuiSvgIcon-root {
+    height: 100%;
+    width: 3rem;
+    margin-right: -0.79rem;
+    background-color: #ffb400;
   }
 
   .submit-btn:hover {
     border: 1px solid #ffb400;
     background-color: #ffb400;
     transition: all 1.2s;
-  }
-
-  p {
-    padding-left: 2rem;
   }
 }
 
@@ -33,15 +19,8 @@
       gap: 0.3rem;
     }
 
-    .submit-btn-div {
-      padding-bottom: 1.2rem;
-      .submit-btn {
-        width: 82%;
-      }
-
-      p {
-        padding-left: 0.9rem;
-      }
+    .submit-btn{
+      width: 80%;
     }
   }
 }

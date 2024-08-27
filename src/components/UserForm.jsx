@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import { MenuItem, Button, Container } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import "../SCSS/UserForm.scss";
@@ -7,10 +7,10 @@ import { TextFieldComponent } from "./Common/TextFieldComponent";
 import { useFormik } from "formik";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
+import PortfolioButton from "./Common/Portfolio Button/PortfolioButton";
 
 const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
-  // const submitSuccess = toast()
 
   const formikInitialValues = {
     username: "",
@@ -77,7 +77,7 @@ const UserForm = () => {
 
   return (
     <Container className="formContainer p-0">
-      <form onSubmit={handleSubmit} className="userForm">
+      <form onSubmit={handleSubmit} className="userForm flex flex-col justify-center">
         <div className="name-email-textfield mob:w-full flex flex-col justify-center items-center">
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
@@ -150,35 +150,15 @@ const UserForm = () => {
           multiline
           rows={4}
         />
-        <div>
-          <div className="submit-btn-div flex justify-center">
-            <Button
-              type="submit"
-              className="submit-btn"
-              disableRipple
-              sx={{
-                backgroundColor: "transparent",
-                boxShadow: "none",
-                "&:hover": {
-                  backgroundColor: "transparent",
-                  boxShadow: "none",
-                },
-                "&:focus": {
-                  outline: "none",
-                  backgroundColor: "transparent",
-                  boxShadow: "none",
-                },
-                "&:active": {
-                  backgroundColor: "transparent",
-                  boxShadow: "none",
-                },
-              }}
-            >
-              <p ref={sendMsgRef}>SEND THE MESSAGE</p>
-              <TelegramIcon className="tele-icon mob:rounded-full text-white bg-pfp-yellow" />
-            </Button>
-          </div>
-        </div>
+
+        <PortfolioButton
+          text="SEND THE MESSAGE"
+          type="submit"
+          icon={TelegramIcon}
+          pRef={sendMsgRef}
+          className='submit-btn w-1/3 m-auto h-12 flex justify-between items-center px-3 bg-transparent outline-none rounded-full border border-solid border-defaultYellow mt-3'
+          iconClassName={`rounded-full ${bodyBg === "#111111" ? "text-white" : "text-gray-600"}`}
+        />
       </form>
       <Toaster />
     </Container>
