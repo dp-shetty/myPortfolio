@@ -8,6 +8,7 @@ import { useFormik } from "formik";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import PortfolioButton from "./Common/Portfolio Button/PortfolioButton";
+import emailjs from "emailjs-com";
 
 const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
