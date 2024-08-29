@@ -34,6 +34,12 @@ const UserForm = () => {
         className:
           "bg-toast-success text-toast-text rounded-toast p-toast shadow-toast",
       });
+      emailjs.sendForm(
+        "@DPShetty811", // Replace with your EmailJS service ID
+        "@DPShetty811", // Replace with your EmailJS template ID
+        "#portfolioForm", // Form ID (use form ID selector)
+        "oXrmZhom4uak5Kfp1" // Replace with your EmailJS user ID
+      )
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form.", {
@@ -77,7 +83,7 @@ const UserForm = () => {
 
   return (
     <Container className="formContainer p-0">
-      <form onSubmit={handleSubmit} className="userForm flex flex-col justify-center">
+      <form onSubmit={handleSubmit} id="portfolioForm" className="userForm flex flex-col justify-center">
         <div className="name-email-textfield mob:w-full flex flex-col justify-center items-center">
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
