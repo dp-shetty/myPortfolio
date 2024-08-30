@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Home from "./components/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import About from "./components/About";
@@ -7,9 +7,21 @@ import Contact from "./components/Contact";
 import Blog from "./components/Blog";
 import NavBar from "./components/NavBar";
 import "./SCSS/App.scss";
-import CursorAnimate from "./components/CursorAnimate";
+import DefaultLoader from "./components/Common/loaders/defaultLoader/DefaultLoader";
 
 function App() {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+  }, []);
+
+  if (loading) {
+    return <DefaultLoader />;
+  }
+
   return (
     <div>
       <BrowserRouter>
