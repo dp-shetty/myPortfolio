@@ -95,23 +95,6 @@
       display: flex;
       justify-content: center;
       align-items: center;
-
-      #imageDiv {
-        width: 9rem;
-        height: 9rem;
-        margin: 3% auto 0 auto;
-        background: #040404;
-        border-radius: 100%;
-        box-shadow: 0.02rem 0.05rem 0.05rem 0.05rem rgba(169, 163, 163, 0.34);
-        overflow: hidden;
-        display: flex;
-        justify-content: center;
-      }
-
-      img {
-        width: 150%;
-        margin-left: 2.5rem;
-      }
     }
   }
 }
