@@ -61,12 +61,16 @@
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
   #navId {
-    top: 88%;
-    height: 12%;
+    // top: 88%;
+    // top: 88.55vh;
+    // height: 12%;
+    top: 31rem;
+    height: 4rem;
     width: 100%;
     flex-direction: row;
     gap: 0.3rem;
     right: 0;
+    bottom: 0rem;
     left: 0;
     background: #2b2a2a;
 
