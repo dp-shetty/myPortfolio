@@ -163,7 +163,7 @@ const UserForm = () => {
           type="submit"
           icon={TelegramIcon}
           pRef={sendMsgRef}
-          className='submit-btn w-1/3 m-auto h-12 flex justify-between items-center px-3 bg-transparent outline-none rounded-full border border-solid border-defaultYellow mt-3'
+          className='submit-btn w-1/3 m-auto h-12 flex justify-between items-center px-3 bg-transparent outline-none rounded-full border border-solid border-defaultYellow mt-3 mb-8'
           iconClassName={`rounded-full ${bodyBg === "#111111" ? "text-white" : "text-gray-600"}`}
         />
       </form>
