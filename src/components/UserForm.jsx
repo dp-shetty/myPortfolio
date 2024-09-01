@@ -159,6 +159,7 @@ const UserForm = () => {
             isDarkMode ? "text-about-value-light" : "text-about-value-dark"
           }`}
           iconClassName={`${isDarkMode ? "text-white" : "text-white"}`}
+          type={'submit'}
         />
       </form>
       <Toaster />
