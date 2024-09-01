@@ -51,30 +51,48 @@ function About() {
 
   return (
     <>
-      <section id="secHead" className="flex justify-center items-center my-1.5rem mx-auto">
+      <section
+        id="secHead"
+        className="flex justify-center items-center my-1.5rem mx-auto mob:w-60 mob:ml-auto"
+      >
         <div id="head1" className="absolute -z-1">
-          <p ref={p1ref} style={{ fontWeight: "bolder" }}>
+          <p
+            ref={p1ref}
+            className="text-8xl font-extrabold tracking-long mob:text-4xl"
+          >
             RESUME
           </p>
         </div>
         <div id="head2">
-          <p ref={p2ref} style={{ fontWeight: "bolder" }}>
-            ABOUT <span>ME</span>
+          <p
+            ref={p2ref}
+            className="text-5xl font-extrabold tracking-long mob:text-2xl"
+          >
+            ABOUT <span className="text-pfp-yellow">ME</span>
           </p>
         </div>
       </section>
 
-      <section id="secBody">
-        <section id="secBody1">
-          <div id="infoBody" ref={p3ref}>
-            {/* FIRST NAME COLUMN */}
-            <div id="firstName">
+      <section
+        id="secBody"
+        className="mt-24 w-92% flex mob:w-98% mob:flex-col mob:mt-6 mob:py-2 mob:px-0 mob:h-69vh mob:overflow-y-auto mob:overflow-x-hidden"
+      >
+        <section id="secBody1" className="w-1/2 mob:w-full mob:py-6 mob:px-0">
+          <div
+            id="infoBody"
+            ref={p3ref}
+            className="w-full flex justify-around text-xl mb-1.2rem pl-0.8rem mob:w-full mob:text-xs mob:mb-4 mob:flex-wrap mob:py-0 mob:px-0.1rem mob:gap-3"
+          >
+            <div
+              id="firstName"
+              className="w-1/2 flex flex-col gap-1.8rem text-0.85em mob:w-full mob:pl-3 mob:gap-3 mob:text-xs mob:p-1"
+            >
               {data.map(({ FirstName, Age, Github, Phone, Skype }, i) => {
                 return (
                   <React.Fragment key={i}>
-                    <p>First Name : {FirstName}</p>
-                    <p>Age : {Age}</p>
-                    <p>
+                    <p className="mob:pl-3">First Name : {FirstName}</p>
+                    <p className="mob:pl-3">Age : {Age}</p>
+                    <p className="mob:pl-3">
                       GITHUB :{" "}
                       <NavLink
                         to={"https://github.com/dp-shetty"}
@@ -84,7 +102,7 @@ function About() {
                         {Github}
                       </NavLink>
                     </p>
-                    <p>
+                    <p className="mob:pl-3">
                       Phone :{" "}
                       <NavLink
                         to={"tel:+916362405153"}
@@ -93,7 +111,7 @@ function About() {
                         {Phone}
                       </NavLink>
                     </p>
-                    <p>
+                    <p className="mob:pl-3">
                       Skype :{" "}
                       <NavLink
                         to="skype:live:.cid.a8c25624fccf1ce3?chat"
@@ -108,15 +126,18 @@ function About() {
             </div>
 
             {/* LAST NAME COLUMN */}
-            <div id="lastName">
+            <div
+              id="lastName"
+              className="w-1/2 flex flex-col gap-1.8rem text-0.85em mob:w-full mob:pl-3 mob:gap-3 mob:text-xs mob:p-1"
+            >
               {data.map(
                 ({ LastName, Nationality, Address, Email, Languages }, i) => {
                   return (
                     <React.Fragment key={i}>
-                      <p>Last Name : {LastName}</p>
-                      <p>Nationality : {Nationality}</p>
-                      <p>Address : {Address}</p>
-                      <p>
+                      <p className="mob:pl-3">Last Name : {LastName}</p>
+                      <p className="mob:pl-3">Nationality : {Nationality}</p>
+                      <p className="mob:pl-3">Address : {Address}</p>
+                      <p className="mob:pl-3">
                         Email :{" "}
                         <NavLink
                           to={"mailto:dps2k811@gmail.com"}
@@ -125,7 +146,7 @@ function About() {
                           {Email}
                         </NavLink>
                       </p>
-                      <p>Languages : {Languages}</p>
+                      <p className="mob:pl-3">Languages : {Languages}</p>
                     </React.Fragment>
                   );
                 }
@@ -139,44 +160,68 @@ function About() {
             href={resume}
             target="_blank"
             pRef={p4ref}
-            aRef={dwdAnchorRef} 
+            aRef={dwdAnchorRef}
           />
         </section>
 
-        <section id="secBody2" ref={secBody2Ref}>
-          <div id="yopDiv">
+        <section
+          id="secBody2"
+          ref={secBody2Ref}
+          className="w-48% flex flex-wrap gap-3 justify-center text-xl mob:w-95% mob:my-0 mob:mx-auto mob:text-xs mob:py-5 mob:px-0"
+        >
+          <div
+            id="yopDiv"
+            className="w-45% rounded-lg shadow-about-cards flex flex-col items-center justify-center mob:w-45% mob:p-1"
+          >
             <p>
-              <span>2+</span>
+              <span className="text-pfp-yellow text-5xl font-extrabold mob:text-3xl">
+                2+
+              </span>
             </p>
-            <p className="details">
-              <hr />
+            <p className="details flex items-center justify-center w-95% gap-1">
+              <hr className="w-8% border border-solid border-boulder" />
               Years Of Experiance
             </p>
           </div>
-          <div id="projectDiv">
+          <div
+            id="projectDiv"
+            className="w-45% rounded-lg shadow-about-cards flex flex-col items-center justify-center mob:w-45% mob:p-1"
+          >
             <p>
-              <span>30+</span>
+              <span className="text-pfp-yellow text-5xl font-extrabold mob:text-3xl">
+                30+
+              </span>
             </p>
-            <p className="details">
-              <hr />
+            <p className="details flex items-center justify-center w-95% gap-1">
+              <hr className="w-8% border border-solid border-boulder" />
               COMPLETED PROJECTS
             </p>
           </div>
-          <div id="customerDiv">
+          <div
+            id="customerDiv"
+            className="w-45% rounded-lg shadow-about-cards flex flex-col items-center justify-center mob:w-45% mob:p-1"
+          >
             <p>
-              <span>0+</span>
+              <span className="text-pfp-yellow text-5xl font-extrabold mob:text-3xl">
+                0+
+              </span>
             </p>
-            <p className="details">
-              <hr />
+            <p className="details flex items-center justify-center w-95% gap-1">
+              <hr className="w-8% border border-solid border-boulder" />
               HAPPY CUSTOMERS
             </p>
           </div>
-          <div id="awardDiv">
+          <div
+            id="awardDiv"
+            className="w-45% rounded-lg shadow-about-cards flex flex-col items-center justify-center mob:w-45% mob:p-1"
+          >
             <p>
-              <span>0+</span>
+              <span className="text-pfp-yellow text-5xl font-extrabold mob:text-3xl">
+                0+
+              </span>
             </p>
-            <p className="details">
-              <hr />
+            <p className="details flex items-center justify-center w-95% gap-1">
+              <hr className="w-8% border border-solid border-boulder" />
               AWARDS WON
             </p>
           </div>

@@ -19,6 +19,7 @@ module.exports = {
       },
       fontSize: {
         toast: "0.875rem",
+        "0.85em": "0.85em",
       },
       borderRadius: {
         toast: "4px",
@@ -28,27 +29,37 @@ module.exports = {
       padding: {
         toast: "10px",
         "1.5rem": "1.5rem",
+        "0.8rem": "0.8rem",
+        "0.1rem": "0.1rem",
       },
       boxShadow: {
         toast: "0 2px 4px rgba(0, 0, 0, 0.2)",
+        "about-cards": "0rem 0rem 0.05rem 0.05rem #4b4b4b",
       },
       zIndex: {
         "-1": "-1",
       },
       borderColor: {
         defaultYellow: "#ffb400",
+        boulder: "#777777",
       },
       width: {
+        "8%": "8%",
+        "92%": "92%",
         "95%": "95%",
+        "98%": "98%",
         "99%": "99%",
         "80%": "80%",
         "40%": "40%",
+        "45%": "45%",
+        "48%": "48%",
         "60%": "60%",
         "3%": "3%",
         "78%": "78%",
       },
       height: {
         h100vh: "100vh",
+        "69vh": "69vh",
         "80%": "80%",
         "0.35vh": "0.35vh",
         "40%": "40%",
@@ -71,6 +82,10 @@ module.exports = {
       },
       gap: {
         "1.3rem": "1.3rem",
+        "1.8rem": "1.8rem",
+      },
+      letterSpacing: {
+        long: "0.5rem",
       },
     },
   },
