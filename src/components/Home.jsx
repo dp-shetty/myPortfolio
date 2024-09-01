@@ -2,6 +2,8 @@ import React, { useEffect, useRef } from "react";
 import "../SCSS/Home.scss";
 import image from "../assets/images/dpsrbg.png";
 import { useSelector } from "react-redux";
+import TypeWriter from "./Common/TypeWriter";
+
 
 function Home() {
   let { bodyBg } = useSelector((state) => state.iconBg);
@@ -34,16 +36,20 @@ function Home() {
         >
           <span>
             <hr id="hleId" />
-            I'M DURGA PRASAD SHETTY.
+            I'M DURGA PRASAD SHETTY.👋
           </span>
-          <p id="middleContent">REACT WEB DEVELOPER</p>
+          <p id="middleContent">REACT WEB DEVELOPER 🖥️🚀</p>
         </p>
         <br />
-        <p id="bodyContent" ref={bodyContentRef}>
-          Creative and passionate Frontend React Developer with a knack for
-          crafting seamless and dynamic user experiences.I build modern web
-          applications that delight users and drive engagement.
-        </p>
+        <div id="bodyContent" ref={bodyContentRef}>
+          <TypeWriter
+            texts={[
+              `Creative and passionate Frontend React Developer 💡 with a knack for crafting seamless and dynamic user experiences. 🌟 I build modern web applications 🚀 that delight users and drive engagement. 💻✨ Your one-stop solution for intuitive and visually stunning web designs! 🎨🖌️`,
+            ]}
+            delays={[20]}
+            loop={true}
+          />
+        </div>
       </div>
     </section>
   );
