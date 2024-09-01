@@ -1,7 +1,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const TypeWriter = ({ texts, delays, loop = false,color  }) => {
+const TypeWriter = ({ texts, delays, loop = false, color }) => {
   return (
     <div style={{ color }}>
       {texts.map((text, index) => (

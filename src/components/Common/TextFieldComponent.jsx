@@ -58,8 +58,6 @@ export const TextFieldComponent = ({
       autoComplete="off"
       margin="normal"
       className={className}
-      // height={height}
-      // fontSize={fontSize}
       sx={{
         "& .MuiOutlinedInput-root": {
           backgroundColor: bodyBg,

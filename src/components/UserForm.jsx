@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import { MenuItem, Button, Container } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import "../SCSS/UserForm.scss";
@@ -12,6 +12,8 @@ import emailjs from "emailjs-com";
 
 const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
+  let { bodyBg } = useSelector((state) => state.iconBg);
+  const isDarkMode = bodyBg === "#111111";
 
   const formikInitialValues = {
     username: "",
@@ -40,7 +42,7 @@ const UserForm = () => {
         "@DPShetty811", // Replace with your EmailJS template ID
         "#portfolioForm", // Form ID (use form ID selector)
         "oXrmZhom4uak5Kfp1" // Replace with your EmailJS user ID
-      )
+      );
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form.", {
@@ -71,21 +73,14 @@ const UserForm = () => {
   const { handleBlur, handleChange, handleSubmit, touched, errors, values } =
     formik;
 
-  const { bodyBg } = useSelector((state) => state.iconBg);
-  const sendMsgRef = useRef();
-
-  useEffect(() => {
-    if (bodyBg === "#111111") {
-      sendMsgRef.current.style.color = "white";
-    } else if (bodyBg === "#ffffff") {
-      sendMsgRef.current.style.color = "#666666";
-    }
-  }, [bodyBg]);
-
   return (
-    <Container className="formContainer p-0">
-      <form onSubmit={handleSubmit} id="portfolioForm" className="userForm flex flex-col justify-center">
-        <div className="name-email-textfield mob:w-full flex flex-col justify-center items-center">
+    <Container>
+      <form
+        onSubmit={handleSubmit}
+        id="portfolioForm"
+        className="flex flex-col items-center"
+      >
+        <div className="flex flex-col justify-center items-center w-full">
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Name"
@@ -157,14 +152,13 @@ const UserForm = () => {
           multiline
           rows={4}
         />
-
         <PortfolioButton
-          text="SEND THE MESSAGE"
-          type="submit"
+          text="SUBMIT THE FORM"
           icon={TelegramIcon}
-          pRef={sendMsgRef}
-          className='submit-btn w-1/3 m-auto h-12 flex justify-between items-center px-3 bg-transparent outline-none rounded-full border border-solid border-defaultYellow mt-3 mb-8'
-          iconClassName={`rounded-full ${bodyBg === "#111111" ? "text-white" : "text-gray-600"}`}
+          className={`border-2 border-solid border-pfp-yellow w-2/3 text-center h-12 rounded-1.7rem flex items-center justify-between mb-7 bg-transparent hover:bg-bgpfp-yellow hover:transition-all hover:duration-bg-transition mt-3 ${
+            isDarkMode ? "text-about-value-light" : "text-about-value-dark"
+          }`}
+          iconClassName={`${isDarkMode ? "text-white" : "text-white"}`}
         />
       </form>
       <Toaster />

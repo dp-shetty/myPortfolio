@@ -1,26 +1,18 @@
-import React, { useEffect, useRef } from "react";
+import React from "react";
 import image from "../assets/images/dpsrbg.png";
 import { useSelector } from "react-redux";
 import TypeWriter from "./Common/TypeWriter";
 
 function Home() {
   let { bodyBg } = useSelector((state) => state.iconBg);
-  let headContentRef = useRef();
 
-  useEffect(() => {
-    if (bodyBg === "#111111") {
-      headContentRef.current.style.color = "white";
-    } else if (bodyBg === "#ffffff") {
-      headContentRef.current.style.color = "#666666";
-    }
-  }, [bodyBg]);
-
-  const textColor = bodyBg === "#111111" ? "white" : "#949494";
+  const isDarkMode = bodyBg === "#111111";
+  const textColor = bodyBg === "#111111" ? "white" : "#777777";
 
   return (
     <section
       id="homeSec"
-      className="h-h100vh flex items-center font-poppins mob:flex-col mob:w-full"
+      className={`h-h100vh flex items-center font-poppins mob:flex-col mob:w-full`}
     >
       <div
         id="profileImgDiv"
@@ -43,11 +35,7 @@ function Home() {
         id="homeContent"
         className="w-60% flex flex-col mob:py-1.5rem mob:px-0 mob:w-full"
       >
-        <p
-          id="headContent"
-          ref={headContentRef}
-          style={{ fontSize: "40px", fontWeight: "600" }}
-        >
+        <p id="headContent" className={`text-4xl font-medium`}>
           <span className="text-2xl text-pfp-yellow flex items-center gap-1.3rem mb-1.2rem mob:text-xl mob:justify-center">
             <hr
               id="hleId"
@@ -57,7 +45,9 @@ function Home() {
           </span>
           <p
             id="middleContent"
-            className="text-2xl mob:flex mob:justify-center"
+            className={`text-2xl mob:flex mob:justify-center ${
+              isDarkMode ? "text-white" : "text-home-black-1"
+            }`}
           >
             REACT WEB DEVELOPER ⚛️
           </p>

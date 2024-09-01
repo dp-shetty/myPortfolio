@@ -1,5 +1,6 @@
 module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}", "./public/index.html"],
+  darkMode: "class",
   theme: {
     extend: {
       screens: {
@@ -16,6 +17,18 @@ module.exports = {
         "toast-error": "#f44336",
         "toast-background": "#333",
         "toast-text": "#fff",
+        "home-black-1": "#666666",
+        "home-black-2": "#777777",
+        "about-black-2": "#616262",
+        "about-black-1": "#EFF0F0",
+        "about-light-1": "#222222",
+        "about-key-light": "#C4C4C4",
+        "about-key-dark": "#929292",
+        "about-value-light": "#F9F9F9",
+        "about-value-dark": "#6D6D6D",
+        "freelance-green": "#2BC42B",
+        'aboutCard-darkText':'#7D7D7D',
+        'Storm-Dust':'#646464',
       },
       fontSize: {
         toast: "0.875rem",
@@ -38,18 +51,25 @@ module.exports = {
       },
       zIndex: {
         "-1": "-1",
+        '5':'5',
       },
       borderColor: {
         defaultYellow: "#ffb400",
         boulder: "#777777",
+        'aboutCard-darkBorder':'#DDDDDD',
+        'aboutCard-lightBorder':'#252525',
       },
       width: {
         "8%": "8%",
+        '12%':'12%',
         "92%": "92%",
+        "93%": "93%",
+        "90%": "90%",
         "95%": "95%",
         "98%": "98%",
         "99%": "99%",
         "80%": "80%",
+        "85%": "85%",
         "40%": "40%",
         "45%": "45%",
         "48%": "48%",
@@ -60,6 +80,8 @@ module.exports = {
       height: {
         h100vh: "100vh",
         "69vh": "69vh",
+        '99.7vh':'99.7vh',
+        '75vh':'75vh',
         "80%": "80%",
         "0.35vh": "0.35vh",
         "40%": "40%",
@@ -69,7 +91,10 @@ module.exports = {
       },
       margin: {
         "10%": "10%",
+        "50%": "50%",
         "1.2rem": "1.2rem",
+        "1.3rem": "1.3rem",
+        '2.8rem':'2.8rem',
         "1.5rem": "1.5rem",
       },
       backgroundColor: {
@@ -83,9 +108,17 @@ module.exports = {
       gap: {
         "1.3rem": "1.3rem",
         "1.8rem": "1.8rem",
+        '0.8rem':'0.8rem',
       },
       letterSpacing: {
         long: "0.5rem",
+      },
+      transitionProperty: {
+        background: "background-color",
+        transform: "transform",
+      },
+      transitionDuration: {
+        "bg-transition": "900ms",
       },
     },
   },
