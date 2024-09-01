@@ -1,5 +1,4 @@
 import React, { useEffect, useRef } from "react";
-import "../SCSS/About.scss";
 import { useSelector } from "react-redux";
 import { FaDownload } from "react-icons/fa";
 import resume from "../assets/docs/Dps.pdf";
