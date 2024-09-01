@@ -1,9 +1,9 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 
-const TypeWriter = ({ texts, delays, loop = false, style = {},ref  }) => {
+const TypeWriter = ({ texts, delays, loop = false,color  }) => {
   return (
-    <>
+    <div style={{ color }}>
       {texts.map((text, index) => (
         <Typewriter
           key={index}
@@ -15,7 +15,7 @@ const TypeWriter = ({ texts, delays, loop = false, style = {},ref  }) => {
           }}
         />
       ))}
-    </>
+    </div>
   );
 };
 

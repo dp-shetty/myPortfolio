@@ -51,7 +51,7 @@ function About() {
 
   return (
     <>
-      <section id="secHead" className="flex justify-center items-center">
+      <section id="secHead" className="flex justify-center items-center my-1.5rem mx-auto">
         <div id="head1" className="absolute -z-1">
           <p ref={p1ref} style={{ fontWeight: "bolder" }}>
             RESUME
