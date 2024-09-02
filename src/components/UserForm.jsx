@@ -14,11 +14,6 @@ const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   let { bodyBg } = useSelector((state) => state.iconBg);
   const isDarkMode = bodyBg === "#111111";
-  
-  const emailJSServiceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
-  const emailJSTemplateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
-  const FormId = import.meta.env.VITE_FORM_ID;
-  const emailJSUserId = import.meta.env.VITE_EMAIL_USER_ID;
 
   const formikInitialValues = {
     username: "",
@@ -43,12 +38,12 @@ const UserForm = () => {
           "bg-toast-success text-toast-text rounded-toast p-toast shadow-toast",
       });
       emailjs.sendForm(
-        emailJSServiceId,
-        emailJSTemplateId,
-        FormId,
-        emailJSUserId,
+        "@DPShetty811", // Replace with your EmailJS service ID
+        "@DPShetty811", // Replace with your EmailJS template ID
+        "#portfolioForm", // Form ID (use form ID selector)
+        "oXrmZhom4uak5Kfp1" // Replace with your EmailJS user ID
       );
-      resetForm();
+      
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form.", {
