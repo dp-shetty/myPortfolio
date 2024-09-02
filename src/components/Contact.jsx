@@ -16,7 +16,7 @@ function Contact() {
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
-    }, 5000);
+    }, 2500);
   }, []);
 
   if (loading) {
