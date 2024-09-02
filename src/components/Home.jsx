@@ -61,7 +61,7 @@ function Home() {
             texts={[
               `Creative and passionate Frontend React Developer 💡 with a knack for crafting seamless and dynamic user experiences. 🌟 I build modern web applications 🚀 that delight users and drive engagement. 💻✨ Your one-stop solution for intuitive and visually stunning web designs! 🎨🖌️`,
             ]}
-            delays={[20]}
+            delays={[80]}
             loop={true}
             color={textColor}
           />
