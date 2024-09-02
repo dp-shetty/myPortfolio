@@ -22,7 +22,7 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = async (values,{resetForm}) => {
+  const formikOnsubmit = async (values, { resetForm }) => {
     try {
       await axios.post(
         "https://my-portfolio-backend-liart.vercel.app/users",
@@ -33,17 +33,17 @@ const UserForm = () => {
           },
         }
       );
+      await emailjs.sendForm(
+        "@DPShetty811",
+        "@DPShetty811",
+        "#portfolioForm",
+        "oXrmZhom4uak5Kfp1"
+      );
       toast.success("Form submitted successfully!", {
         className:
           "bg-toast-success text-toast-text rounded-toast p-toast shadow-toast",
       });
-      emailjs.sendForm(
-        "@DPShetty811", // Replace with your EmailJS service ID
-        "@DPShetty811", // Replace with your EmailJS template ID
-        "#portfolioForm", // Form ID (use form ID selector)
-        "oXrmZhom4uak5Kfp1" // Replace with your EmailJS user ID
-      );
-      
+      resetForm();
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form.", {
