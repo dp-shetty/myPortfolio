@@ -14,16 +14,16 @@ function CursorAnimate() {
           outerScale={5}
           clickables={[
             // 'a',
-            'input[type="text"]',
-            'input[type="email"]',
-            'input[type="number"]',
-            'input[type="submit"]',
-            'input[type="image"]',
-            "label[for]",
-            "select",
-            "textarea",
+            // 'input[type="text"]',
+            // 'input[type="email"]',
+            // 'input[type="number"]',
+            // 'input[type="submit"]',
+            // 'input[type="image"]',
+            // "label[for]",
+            // "select",
+            // "textarea",
             "button",
-            ".link",
+            // ".link",
           ]}
         />
       </div>

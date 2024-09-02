@@ -14,6 +14,11 @@ const UserForm = () => {
   const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
   let { bodyBg } = useSelector((state) => state.iconBg);
   const isDarkMode = bodyBg === "#111111";
+  
+  const emailJSServiceId = import.meta.env.VITE_EMAIL_SERVICE_ID;
+  const emailJSTemplateId = import.meta.env.VITE_EMAIL_TEMPLATE_ID;
+  const FormId = import.meta.env.VITE_FORM_ID;
+  const emailJSUserId = import.meta.env.VITE_EMAIL_USER_ID;
 
   const formikInitialValues = {
     username: "",
@@ -22,7 +27,7 @@ const UserForm = () => {
     comments: "",
   };
 
-  const formikOnsubmit = async (values) => {
+  const formikOnsubmit = async (values,{resetForm}) => {
     try {
       await axios.post(
         "https://my-portfolio-backend-liart.vercel.app/users",
@@ -38,11 +43,12 @@ const UserForm = () => {
           "bg-toast-success text-toast-text rounded-toast p-toast shadow-toast",
       });
       emailjs.sendForm(
-        "@DPShetty811", // Replace with your EmailJS service ID
-        "@DPShetty811", // Replace with your EmailJS template ID
-        "#portfolioForm", // Form ID (use form ID selector)
-        "oXrmZhom4uak5Kfp1" // Replace with your EmailJS user ID
+        emailJSServiceId,
+        emailJSTemplateId,
+        FormId,
+        emailJSUserId,
       );
+      resetForm();
     } catch (error) {
       console.error("Error submitting form:", error);
       toast.error("Failed to submit the form.", {
@@ -159,10 +165,14 @@ const UserForm = () => {
             isDarkMode ? "text-about-value-light" : "text-about-value-dark"
           }`}
           iconClassName={`${isDarkMode ? "text-white" : "text-white"}`}
-          type={'submit'}
+          type={"submit"}
         />
       </form>
-      <Toaster />
+      <Toaster
+        toastOptions={{
+          duration: 5000,
+        }}
+      />
     </Container>
   );
 };

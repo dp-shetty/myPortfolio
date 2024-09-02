@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import "../SCSS/Contact.scss";
 import { FaMap } from "react-icons/fa";
@@ -6,10 +6,22 @@ import ContactMailIcon from "@mui/icons-material/ContactMail";
 import CallIcon from "@mui/icons-material/Call";
 import { NavLink } from "react-router-dom";
 import UserForm from "./UserForm";
+import ContactLoader from "./Common/loaders/contactLoader/ContactLoader";
 
 function Contact() {
   let { bodyBg } = useSelector((state) => state.iconBg);
   const isDarkMode = bodyBg === "#111111";
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 5000);
+  }, []);
+
+  if (loading) {
+    return <ContactLoader />;
+  }
 
   return (
     <>
