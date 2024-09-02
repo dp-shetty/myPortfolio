@@ -11,7 +11,7 @@ const ContactLoader = () => {
         <div className="shadow"></div>
         <div className="shadow"></div>
         <div className="shadow"></div>
-        <span className='w-max'>Taking You To Contacts</span>
+        <span className='w-max'>---/Contacts!!</span>
       </div>
     </div>
   );
