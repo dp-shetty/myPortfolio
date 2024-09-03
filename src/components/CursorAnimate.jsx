@@ -22,8 +22,9 @@ function CursorAnimate() {
             // "label[for]",
             // "select",
             // "textarea",
-            "button",
+            // "button",
             // ".link",
+            'input[type="checkbox"]'
           ]}
         />
       </div>

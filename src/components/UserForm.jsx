@@ -1,5 +1,5 @@
 import React from "react";
-import { MenuItem, Button, Container } from "@mui/material";
+import { MenuItem, Container } from "@mui/material";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import "../SCSS/UserForm.scss";
 import { useSelector } from "react-redux";
@@ -23,7 +23,30 @@ const UserForm = () => {
   };
 
   const formikOnsubmit = async (values, { resetForm }) => {
+    const { username, useremail, userrole } = values;
+
     try {
+      if (!username || !useremail || !userrole) {
+        toast.error("Please fill required fields.", {
+          className:
+            "bg-toast-error text-toast-text rounded-toast p-toast shadow-toast",
+        });
+        return;
+      }
+
+      const { data } = await axios.get(
+        "https://my-portfolio-backend-liart.vercel.app/users"
+      );
+      const emailExists = data.some((user) => user.useremail === useremail);
+
+      if (emailExists) {
+        toast.error("Email already exists!!!", {
+          className:
+            "bg-toast-error text-toast-text rounded-toast p-toast shadow-toast",
+        });
+        return;
+      }
+
       await axios.post(
         "https://my-portfolio-backend-liart.vercel.app/users",
         values,
@@ -33,7 +56,7 @@ const UserForm = () => {
           },
         }
       );
-      await emailjs.sendForm(
+      const emailResult = await emailjs.sendForm(
         "@DPShetty811",
         "@DPShetty811",
         "#portfolioForm",
@@ -55,13 +78,14 @@ const UserForm = () => {
 
   const formikValidate = (values) => {
     const errors = {};
-    if (!values.username) errors.username = "username is required";
-    if (!values.useremail) {
-      errors.useremail = "email is required";
-    } else if (!emailRegex.test(values.useremail)) {
-      errors.useremail = "invalid email format";
+    const { username, useremail, userrole } = values;
+    if (!username) errors.username = "Username is required";
+    if (!useremail) {
+      errors.useremail = "Email is required";
+    } else if (!emailRegex.test(useremail)) {
+      errors.useremail = "Invalid email format";
     }
-    if (!values.userrole) errors.userrole = "role is required";
+    if (!userrole) errors.userrole = "Role is required";
     return errors;
   };
 
@@ -73,6 +97,7 @@ const UserForm = () => {
 
   const { handleBlur, handleChange, handleSubmit, touched, errors, values } =
     formik;
+  const { username, useremail, userrole, comments } = values;
 
   return (
     <Container>
@@ -80,13 +105,14 @@ const UserForm = () => {
         onSubmit={handleSubmit}
         id="portfolioForm"
         className="flex flex-col items-center"
+        noValidate
       >
         <div className="flex flex-col justify-center items-center w-full">
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Name"
               name="username"
-              value={values.username}
+              value={username}
               onChange={handleChange}
               onBlur={handleBlur}
               type="text"
@@ -94,19 +120,15 @@ const UserForm = () => {
               touched={touched.username}
               height="1.2rem"
               fontSize="0.875rem"
+              required={true}
             />
-            {touched.username && errors.username && (
-              <div className="nameError text-red-600 text-sm">
-                {errors.username}
-              </div>
-            )}
           </div>
 
           <div className="w-full flex flex-col items-center">
             <TextFieldComponent
               label="Email"
               name="useremail"
-              value={values.useremail}
+              value={useremail}
               onChange={handleChange}
               onBlur={handleBlur}
               type="email"
@@ -114,12 +136,8 @@ const UserForm = () => {
               touched={touched.useremail}
               height="1.2rem"
               fontSize="0.875rem"
+              required={true}
             />
-            {touched.useremail && errors.useremail && (
-              <div className="emailError text-red-600 text-sm">
-                {errors.useremail}
-              </div>
-            )}
           </div>
         </div>
 
@@ -127,7 +145,7 @@ const UserForm = () => {
           select
           label="Who you are"
           name="userrole"
-          value={values.userrole}
+          value={userrole}
           onChange={handleChange}
           onBlur={handleBlur}
           error={touched.userrole && errors.userrole}
@@ -135,24 +153,32 @@ const UserForm = () => {
           height="1.2rem"
           fontSize="0.875rem"
           selectFontSize="0.875rem"
+          required={true}
         >
           <MenuItem value="interviewer">INTERVIEWER</MenuItem>
           <MenuItem value="visiter">VISITER</MenuItem>
           <MenuItem value="contributor">OPEN-SOURCE CONTRIBUTOR</MenuItem>
         </TextFieldComponent>
-        {touched.userrole && errors.userrole && (
-          <div className="flex justify-center items-center text-red-600 text-sm">
-            {errors.userrole}
-          </div>
-        )}
+
         <TextFieldComponent
           label="Comments"
           name="comments"
-          value={values.comments || ""}
+          value={comments || ""}
           onChange={handleChange}
           multiline
           rows={4}
+          required={false}
         />
+
+        <p
+          className={`text-sm ${
+            isDarkMode ? "text-about-value-light" : "text-about-value-dark"
+          }`}
+        >
+          Fields marked with (<span className="text-red-600">*</span>), are
+          required fields.
+        </p>
+
         <PortfolioButton
           text="SUBMIT THE FORM"
           icon={TelegramIcon}

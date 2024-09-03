@@ -1,5 +1,5 @@
 import React from 'react';
-import './ContactLoader.scss'; // Ensure this path matches your file structure
+import './ContactLoader.scss';
 
 const ContactLoader = () => {
   return (
@@ -11,7 +11,6 @@ const ContactLoader = () => {
         <div className="shadow"></div>
         <div className="shadow"></div>
         <div className="shadow"></div>
-        <span className='w-max'>---/Contacts!!</span>
       </div>
     </div>
   );

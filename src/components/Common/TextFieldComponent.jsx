@@ -10,6 +10,7 @@ export const TextFieldComponent = ({
   onChange,
   select = false,
   multiline = false,
+  required,
   rows,
   children,
   onBlur,
@@ -24,6 +25,7 @@ export const TextFieldComponent = ({
   const [labelColor, setLabelColor] = useState("#666666");
   const [iconColor, setIconColor] = useState("#ffb400");
   const [menuItemBg, setMenuItemBg] = useState("red");
+  const [requiredColor, setRequiredColor] = useState("red");
   const [menuItemColor, setMenuItemColor] = useState("#000000");
   let { bodyBg } = useSelector((state) => state.iconBg);
 
@@ -58,6 +60,7 @@ export const TextFieldComponent = ({
       autoComplete="off"
       margin="normal"
       className={className}
+      required={required}
       sx={{
         "& .MuiOutlinedInput-root": {
           backgroundColor: bodyBg,
@@ -106,6 +109,9 @@ export const TextFieldComponent = ({
         },
         "& .MuiInputLabel-root.Mui-focused": {
           color: labelErrorColor,
+        },
+        "& .MuiInputLabel-asterisk": {
+          color: requiredColor, // Style the required asterisk
         },
         "& .MuiSelect-icon": {
           color: iconColor,
