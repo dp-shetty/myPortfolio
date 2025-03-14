@@ -49,7 +49,7 @@ function Home() {
               isDarkMode ? "text-white" : "text-home-black-1"
             }`}
           >
-            REACT WEB DEVELOPER ⚛️
+            MERN / MEVN DEVELOPER ⚛️
           </p>
         </p>
         <br />
@@ -59,7 +59,7 @@ function Home() {
         >
           <TypeWriter
             texts={[
-              `Creative and passionate Frontend React Developer 💡 with a knack for crafting seamless and dynamic user experiences. 🌟 I build modern web applications 🚀 that delight users and drive engagement. 💻✨ Your one-stop solution for intuitive and visually stunning web designs! 🎨🖌️`,
+              `Creative and passionate MERN / MEVN Fullstack Developer 💡 with a knack for crafting seamless and dynamic user experiences. 🌟 I build modern web applications 🚀 that delight users and drive engagement. 💻✨ Your one-stop solution for intuitive and visually stunning web designs! 🎨🖌️`,
             ]}
             delays={[80]}
             loop={true}

@@ -98,7 +98,7 @@ function Contact() {
                         : "text-aboutCard-darkText"
                     }`}
                   >
-                    Basavanagudi, Banglore, INDIA 560019.
+                    JP Nagar Ph-3, Banglore, INDIA 560019.
                   </p>
                 </div>
               </div>
